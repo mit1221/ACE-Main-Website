@@ -13,53 +13,30 @@
 
   <title>Academic and Campus Events, University of Toronto</title>
   <link rel="shortcut icon" href="images/ico.ico">
-  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/main.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 </head>
 
 <body>
   <!-- Header and Titles -->
   <div id="container">
-    <!-- <div id="header">
-      <div id="header_main"><a href="index.html" class="title"><span>HOME</span></a></div>
-      <div id="top_links"><a href="#" onClick="setActiveStyleSheet('l_text'); return false;" class="white">font size</a></div>
-      <div id="top_links2"><a href="#" onClick="setActiveStyleSheet('xl_text'); return false;" class="white">font size</a></div>
-      <div id="top_links3"><a href="#" onClick="setActiveStyleSheet('standard'); return false;" class="white">font size</a></div> -->
-
-    <!-- Header Menu -->
-    <!-- <div id="tab_front">
-        <a href="room_res.html" class="tab ft srr">Room Resrv<span>Reserve a room or lookup an existing booking</span></a>
-        <a href="../class_spec" class="tab ft scs">Room Descrp<span>Classroom descriptions and photographs</span></a>
-        <a href="weddinghome.html" class="tab ft swh">Weddings<span>Apply for wedding photography on campus</span></a>
-        <a href="film.html" class="tab ft sfi">Filming<span>Apply for commercial filming on campus</span></a>
-        <a href="contact.html" class="tab ft scu">Contact Us<span>Location and contact info</span></a></div>
-      <div id="tab_back">
-        <a href="tech_support.html" class="tab bk sts">Tech Support<span>Classroom and A/V technical support</span></a>
-        <a href="../comments" class="tab bk spb">Problem Box<span>Online form for classroom and A/V problems</span></a>
-        <a href="inv.html" class="tab bk sbp">Building Plans<span>AutoCad and PDF floor plans of campus buildings</span></a>
-        <a href="accessibility.html" class="tab bk sac">Accessibility<span>Building and meeting room accessibility</span></a>
-        <a href="maps.html" class="tab bk scm">Campus Maps<span>St. George campus and other map links</span></a></div>
-    </div> -->
     <header>
-      <a href="index.html" style="display: flex; align-items: center; border-bottom: none; color: white; font-family: Arial, sans-serif; font-size: 35px;">
-        <img style="height: 60px; padding-right: 15px" src="website/images/UofT_Logo.svg" alt="U of T Logo" />
+      <a href="index.html" id='image'>
+        <img style="height: 60px; padding-right: 15px" src="images/UofT_Logo.svg" alt="U of T Logo" />
         <div style="height: 60px; border-left: 1px solid white"></div>
-        <img style="height: 50px; padding-left: 15px" src="website/images/ACE_Logo.svg" alt="ACE Logo" />
+        <img style="height: 50px; padding-left: 15px" src="images/ACE_Logo.svg" alt="ACE Logo" />
       </a>
       <nav>
         <ul>
-          <!-- <li><a href="tech_support.html" class="active">Tech Support</a></li>
-          <li><a href="../comments">Problem Box</a></li>
-          <li><a href="inv.html">Building Plans</a></li>
-          <li><a href="accessibility.html">Accessibility</a></li>
-          <li><a href="maps.html">Campus Maps</a></li>
-          <li><a href="room_res.html">Room Resrv</a></li>
-          <li><a href="../class_spec">Room Descrp</a></li>
-          <li><a href="weddinghome.html">Weddings</a></li>
-          <li><a href="film.html">Filming</a></li>
-          <li><a href="contact.html">Contact Us</a></li> -->
-
-
+          <!-- <li class="dropdown">
+            Services &nbsp;<img src="images/arrow.svg" alt="down arrow icon" />
+            <div class="dropdown_content">
+              <a href="tech_support.html">Tech Support</a>
+              <a href="room_res.html" class="active">Room Resrv</a>
+              <a href="weddinghome.html">Weddings</a>
+              <a href="film.html">Filming</a>
+            </div>
+          </li> -->
           <li><a href="tech_support.html">Tech Support</a></li>
           <li><a href="room_res.html">Room Resrv</a></li>
           <li><a href="weddinghome.html">Weddings</a></li>
@@ -71,14 +48,13 @@
     </header>
 
     <div class="wrapper">
-      <!------------------------------------------------------- sidebar menu on the left ------------------->
-
+      <!------------------------------ sidebar menu on the left ------------------->
       <div id="sidebar">
-        <a href="tes/" target="_blank" class="sidebar_card">
+        <a href="http://www.ace.utoronto.ca/tes/" target="_blank" class="sidebar_card">
           <div>
 
             <svg viewBox="0 0 337 337" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <title>tes</title>
+              <title>checkmark icon</title>
               <g fill="#5880AF" fill-rule="evenodd">
                   <path d="M293.564578,55.5772042 C262.728762,21.4472825 218.119022,0 168.5,0 C75.4400197,0 0,75.4400197 0,168.5 C0,261.55998 75.4400197,337 168.5,337 C261.55998,337 337,261.55998 337,168.5 C337,153.608165 335.068155,139.167537 331.441403,125.415054 L219.621679,237.234337 L165.765122,291.090352 L111.907483,237.234337 L60,185.326312 L113.85818,131.468673 L165.765122,183.376156 L293.564578,55.5772042 Z" id="Combined-Shape" ></path>
               </g>
@@ -92,7 +68,7 @@
           <div>
 
             <svg viewBox="0 0 386 479" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <title>icon</title>
+              <title>TSJ icon</title>
               <g fill="#5880AF" fill-rule="evenodd" transform="translate(-25.000000, 0.000000)">
                   <path d="M172.472336,399.365522 L347.709292,426.563948 L347.841645,408.629096 C238.948095,389.669312 183.832375,344.68545 182.494485,273.677509 C182.066345,250.954154 185.411133,232.963517 192.528848,219.705599 L155.78677,213.886226 L154.435922,372.158401 C157.597136,369.887428 160.922389,367.498631 164.411682,364.992009 L219.835477,365.013963 L172.472336,399.365522 Z" id="Combined-Shape"></path>
                   <path d="M165.058892,370 L204.513573,370.019763 L133.123134,421.647056 C124.056785,418.064136 117.06171,413.583719 112.13791,408.205804 C113.18495,407.450308 130.825277,394.71504 165.058892,370 Z" id="Rectangle-6-Copy-4"></path>
@@ -104,7 +80,7 @@
             <p>Teaching Station Jr.</p><br>
 
             <svg viewBox="0 0 424 380" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <title>icon</title>
+              <title>Teaching Station icon</title>
               <g fill="#5880AF" fill-rule="evenodd">
                   <polygon points="40.176322 377 0 123 226 211.907906 226 377"></polygon>
                   <polygon points="10 112.465311 115.56824 85 334 151.151354 234.290499 201"></polygon>
@@ -122,7 +98,7 @@
           <div>
 
             <svg viewBox="0 0 674 350" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <title>logo</title>
+              <title>con hall icon</title>
               <g fill="#5880AF" fill-rule="evenodd">
                   <path d="M658.632075,146.059908 L674,146.059908 L659.091607,162.9593 L659.091607,350 L15.5722569,350 L15.5722569,163.711823 L-4.54747351e-13,146.059908 L15.6998572,146.059908 L658.632075,146.059908 Z M137.682191,186.359447 L137.682191,340.230415 L149.893184,340.230415 L149.893184,186.359447 L137.682191,186.359447 Z M527.212879,186.359447 L527.212879,340.230415 L539.423872,340.230415 L539.423872,186.359447 L527.212879,186.359447 Z M171.872972,186.359447 L171.872972,340.230415 L214.611449,340.230415 L214.611449,186.359447 L171.872972,186.359447 Z M236.591237,186.359447 L236.591237,340.230415 L287.877409,340.230415 L287.877409,186.359447 L236.591237,186.359447 Z M312.299396,186.359447 L312.299396,340.230415 L363.585568,340.230415 L363.585568,186.359447 L312.299396,186.359447 Z M388.007555,186.359447 L388.007555,340.230415 L439.293727,340.230415 L439.293727,186.359447 L388.007555,186.359447 Z M461.273515,186.359447 L461.273515,340.230415 L504.011992,340.230415 L504.011992,186.359447 L461.273515,186.359447 Z M46.3549409,85 L46.3549409,98.4331797 L34.1439476,85 L46.3549409,85 Z M633.750556,85 L645.961549,85 L633.750556,98.4331797 L633.750556,85 Z" id="Combined-Shape"></path>
                   <rect id="Rectangle-Copy" x="46" y="85" width="588" height="55"></rect>
@@ -137,13 +113,8 @@
 
       <!------------------------------------ main section ------------------------------------------------->
       <div id="main">
-        <h1>Academic + Campus Events<br><a style="border-bottom: none" target="_blank" href="http://www.utoronto.ca"><span class="sub_title">University of Toronto, Downtown Campus <span>&#10140;</span></span></a></h1>
+        <h1>Academic + Campus Events<br><a target="_blank" href="http://www.utoronto.ca"><span class="sub_title">University of Toronto, Downtown Campus <span>&#10140;</span></span></a></h1>
 
-        <!------------------------------------
-<embed type="application/x-shockwave-flash" src="https://picasaweb.google.com/s/c/bin/slideshow.swf" width="400" height="100" flashvars="host=picasaweb.google.com&hl=en_US&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F111100779170809125103%2Falbumid%2F5716835345514417889%3Falt%3Drss%26kind%3Dphoto%26hl%3Den_US" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>
-<noembed>Flash slideshow of ACE classrooms</noembed>
-<br>
-------------------------------------------------->
         <table id="services_table">
           <tr>
             <td width="30%"><a href="room_res.html">Room Reservation</a></td>
@@ -185,37 +156,34 @@
 
         <!------------------------------------------- Contact Info Summary ------------------------>
         <div id="contact_info_card">
-          <p class="subtitle"><img src="website/images/location.svg" alt="location icon" /><strong>Location</strong></p>
-          <a href="http://map.utoronto.ca/building/004" target="_blank">
-            <p style="margin-bottom: 10px; padding-right: 10px"><mark>12 Queen's Park Crescent West, Toronto,<br>ON M5S 1S8 <span>&#187;</span></mark></p>
-          </a>
+          <h3><img src="images/location.svg" alt="location icon" />Location</h3>
 
-          <p class="subtitle"><img src="website/images/clock.svg" alt="clock icon" /><strong>Hours</strong></p>
-          <p>September-June<br><strong>Monday - Friday</strong><br>9:00 am - 5:00 pm</p>
+          <p style="padding-right: 10px">
+            <a href="http://map.utoronto.ca/building/004" target="_blank">
+              <mark>12 Queen's Park Crescent West, Toronto, ON M5S 1S8 <span>&#187;</span></mark>
+            </a>
+          </p>
+
+
+          <h3><img src="images/clock.svg" alt="clock icon" />Hours</h3>
+          <p><strong>September-June</strong><br>Monday - Friday: <br>9:00 am - 5:00 pm</p>
+          <p><strong>July-August</strong><br>Monday - Friday: <br>9:00 am - 4:30 pm</p>
         </div>
       </div>
     </div>
+
     <!------------------------------------------------- foooter ------------------------------------>
     <footer id="footer">
-      <table id="footer_table">
-        <tr>
-          <td><a href="index2.html">About Us</a></td>
-          <td><a href="maps.html">Campus Maps</a></td>
-          <td><a href="refundpolicy.html">Policies</a></td>
-          <td><a href="contact.html">Contact Us/Find Us</a></td>
-
-        </tr>
-      </table>
+      <nav>
+        <ul id="footer_items">
+          <li><a href="index2.html">About Us</a></li>
+          <li><a href="http://map.utoronto.ca" target="_blank">Campus Map</a></li>
+          <li><a href="refundpolicy.html">Policies</a></li>
+          <li><a href="contact.html">Contact Us/Find Us</a></li>
+        </ul>
+      </nav>
     </footer>
   </div>
-
-
-  <!-- <script>
-    var footer = document.getElementById('footer');
-    footer.style.top = '0px';
-    footer.style.top = document.body.scrollHeight + 'px';
-
-  </script> -->
 </body>
 
 </html>

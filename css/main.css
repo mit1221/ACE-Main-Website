@@ -1,0 +1,415 @@
+/* Feb 2013 */
+
+::-moz-selection {
+  color: white;
+  background: #5880AF;
+}
+
+::selection {
+  color: white;
+  background: #5880AF;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+  border: 0;
+  margin: 0;
+	text-align: center;
+	font-family: 'Open Sans', Verdana, Geneva, Sans-Serif, Arial, Helvetica;
+	color: #333;
+}
+
+#container {
+	position: relative;
+  min-width: 1000px;
+  min-height: 100vh;
+	text-align: left;
+	z-index: 0;
+	display: block;
+}
+
+#services_table {
+	table-layout: auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#services_table td {
+  text-align: left;
+}
+
+#services_table td a {
+	display: block;
+	padding: 10px 15px;
+  color: #333;
+}
+
+#services_table td:first-child a {
+	text-transform: uppercase;
+	font-weight: bold;
+  color: #002A5C;
+  padding-left: 0px;
+}
+
+#services_table tr {
+	transition: 0.2s;
+}
+
+#services_table tr:hover {
+	background-color: #a7a3a3;
+}
+
+#services_table tr:active {
+	background-color: #938f8f;
+}
+
+/* ----------------------------- FOOTER -----------------------------*/
+footer {
+	background-color: #002A5C;
+	min-width: 1000px;
+	width: 100%;
+	/* height: 70px; */
+	/* padding: 15px 30px; */
+  position: absolute;
+  bottom: 0px;
+	box-sizing: border-box;
+  z-index: 10;
+}
+
+#footer_items {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#footer_items a {
+  display: block;
+  color: #bccbde;
+  padding: 25px 25px;
+}
+
+#footer_items a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------------------- LINKS -------------------------------- */
+
+a {
+  text-decoration: none;
+}
+
+/* keep images from highlighting on hover */
+a.img {
+  border: 0;
+  margin: 0;
+  text-decoration: none;
+  background: none;
+  padding: 0;
+}
+
+a.img:visited {
+  border: 0;
+  text-decoration: none;
+  margin: 0;
+}
+
+a.img:hover {
+  border: 0;
+  text-decoration: none;
+  margin: 0;
+}
+
+a img		{
+  border: 0;
+}
+
+a img:link	 {
+  border: 0;
+}
+
+a img:visited    {
+  border: 0;
+ }
+
+a img:hover	  {
+  border: 0;
+}
+
+a img:active 	{
+  border: 0;
+}
+
+/* ---------------------------------------------------------- HEADER ------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #002A5C;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 21;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header li a {
+  display: block;
+  color: white;
+  padding: 30px 15px;
+  transition: 0.2s;
+}
+
+header li a:hover:not(.active) {
+    background-color: #264F7F;
+}
+
+header #image {
+  display: flex;
+  align-items: center;
+  padding: 10px 25px;
+}
+
+.dropdown {
+  display: block;
+  color: white;
+  padding: 30px 15px;
+  transition: 0.2s;
+}
+
+.dropdown:hover {
+  background-color: #264F7F;
+}
+
+.dropdown_content {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: 30px;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 20;
+  transition: 0.2s;
+}
+
+.dropdown_content a {
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown_content a:not(.active) {
+  color: #002A5C;
+}
+
+.dropdown:hover .dropdown_content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown_content a:hover {
+  color: white;
+}
+
+.dropdown img {
+  transform: rotate(90deg);
+  height: 10px;
+  vertical-align: middle;
+}
+
+/* For the active tab on the navigation bar */
+.active {
+  background-color: #001E42;
+  pointer-events: none;
+  font-weight: bold;
+}
+
+/* ----------------------------- BODY WRAPPER -------------------- */
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 120px;
+}
+
+.wrapper > div {
+  margin: 30px 20px 0 20px;
+}
+
+/* ---------------------------- LEFT SIDE --------------------------- */
+#sidebar {
+  flex: 1;
+}
+
+#main {
+  flex: 4;
+}
+
+#right {
+  flex: 1;
+}
+
+#sidebar a {
+  display: block;
+}
+
+.sidebar_card {
+  border: 1px solid #002A5C;
+	color: #002A5C;
+	padding: 20px;
+	text-align: center;
+	margin-top: 15px;
+	transition: background-color 0.3s ease-out,
+              color 0.2s ease-out,
+              transform 0.1s ease-in;
+}
+
+#right .sidebar_card {
+  margin-top: 10px;
+}
+
+.sidebar_card:first-child,
+#right .sidebar_card:first-child {
+	margin-top: 0px;
+}
+
+.sidebar_card:hover {
+	background-color: #002A5C;
+  color: white;
+	transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
+.sidebar_text {
+	margin-top: 15px;
+	margin-bottom: 0px;
+}
+
+svg {
+	height: 50px;
+}
+
+.sidebar_card svg g {
+  fill: #002A5C;
+	transition: 0.1s;
+}
+
+.sidebar_card:hover svg g {
+	fill: white;
+}
+
+/* ----------------------------- RIGHT SIDE ----------------------------- */
+#right a {
+  display: block;
+  outline: none;
+}
+
+#contact_info_card {
+	background-color: #CCCCCC;
+	padding: 15px;
+	margin: 10px 0px;
+}
+
+#contact_info_card p {
+	margin: 0 0 20px 0;
+}
+
+#contact_info_card p:last-child {
+	margin-bottom: 0px;
+}
+
+#contact_info_card mark {
+  background-color: #CCCCCC;
+  transition: 0.2s;
+}
+
+#contact_info_card a:hover mark {
+  background-color: #a7a3a3;
+}
+
+#contact_info_card span {
+  transition: 0.2s;
+}
+
+#contact_info_card a:hover span {
+  margin-left: 3px;
+}
+
+#contact_info_card img {
+	height: 1.1em;
+	vertical-align: middle;
+	padding-right: 8px;
+	padding-bottom: 5px;
+}
+
+/* ------------------------- SUBTITLE BELOW PAGE TITLE ---------------*/
+.sub_title 	{
+  color: #002A5C;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 5px 5px 5px 0;
+  transition: 0.2s;
+}
+
+.sub_title:hover {
+  background-color: #CCCCCC;
+}
+
+.sub_title span {
+  transition: 0.2s;
+}
+
+.sub_title:hover span {
+  margin-left: 3px;
+}
+
+/* ---------------------------- HEADINGS -----------------------------*/
+h1 	{
+  font-weight: bold;
+  line-height: 1.25em;
+  margin: 0px 0px 15px 0px;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  color: #333;
+}
+
+h2	{
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000;
+  line-height: 1.4em;
+  text-align: left;
+}
+
+h3	{
+  text-transform: uppercase;
+  font-size: 1.1em;
+  color: #002A5C;
+  border-bottom: 1px solid #a7a3a3;
+  margin: 0 0 5px 0;
+}
+
+/* h4 is used by the oracle pages */
+h4	{
+  font-size: 1.2em;
+  text-transform: none;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  margin-bottom: 0.5em;
+}
