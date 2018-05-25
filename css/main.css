@@ -24,7 +24,7 @@ body {
 
 #container {
 	position: relative;
-  min-width: 1000px;
+  min-width: 1200px;
   min-height: 100vh;
 	text-align: left;
 	z-index: 0;
@@ -59,6 +59,7 @@ header li a {
 
 header li a:hover:not(.active) {
     background-color: #264F7F;
+    color: white;
 }
 
 header #image {
@@ -103,10 +104,6 @@ header #image {
 .dropdown:hover .dropdown_content {
   opacity: 1;
   visibility: visible;
-}
-
-.dropdown_content a:hover {
-  color: white;
 }
 
 .dropdown img {
@@ -330,50 +327,64 @@ footer {
   text-decoration: underline;
 }
 
-/* ----------------------------- LINKS -------------------------------- */
+/* ---------------------- DEFAULT LINK FORMATTING ------------------------- */
 a {
   text-decoration: none;
+  color: #264F7F;
 }
 
-/* keep images from highlighting on hover */
-a.img {
-  border: 0;
-  margin: 0;
-  text-decoration: none;
+a:hover {
+  color: #002A5C;
+}
+
+/* ----------------------- BUTTON CLASS FORMATTING ----------------------- */
+.button {
+  border: 1px solid #002A5C;
+  color: #002A5C;
   background: none;
-  padding: 0;
+  position: relative;
+  display: inline-block;
+  background-color: none;
+  padding: 20px;
+  transition: background-color 0.3s ease-out,
+              color 0.2s ease-out;
 }
 
-a.img:visited {
-  border: 0;
-  text-decoration: none;
-  margin: 0;
+.button:hover {
+  color: white;
+  background-color: #002A5C;
 }
 
-a.img:hover {
-  border: 0;
-  text-decoration: none;
-  margin: 0;
+.button .tooltip_text {
+    visibility: hidden;
+    opacity: 0;
+    width: 330px;
+    background-color: #CCC;
+    color: #333;
+    text-align: left;
+    border-radius: 8px;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+    top: -0.5em;
+    left: 105%;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
 }
 
-a img		{
-  border: 0;
+.button .tooltip_text::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #CCC transparent transparent;
 }
-
-a img:link	 {
-  border: 0;
-}
-
-a img:visited    {
-  border: 0;
- }
-
-a img:hover	  {
-  border: 0;
-}
-
-a img:active 	{
-  border: 0;
+.button:hover .tooltip_text {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* ---------------------------- HEADINGS -----------------------------*/
@@ -404,14 +415,20 @@ h3	{
 
 /* h4 is used by the oracle pages */
 h4	{
-  font-size: 1.2em;
-  text-transform: none;
-  font-weight: bold;
-  color: #000;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #a7a3a3;
   margin: 0;
   padding: 0;
-  text-align: left;
-  margin-bottom: 0.5em;
+  margin-bottom: 30px;
+}
+
+h5 {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
 
 /* ============================= ABOUT US PAGE ======================= */
@@ -419,10 +436,8 @@ h4	{
   padding: 0 100px 120px 100px;
 }
 
-.majorSection {
-  border-bottom: 2px solid #CCCCCC;
-  padding-bottom: 10px;
-  margin-bottom: 40px;
+.wrapper2 a:not(.button) {
+  font-weight: bold;
 }
 
 section {
@@ -434,6 +449,10 @@ section {
   flex: 3;
 }
 
+.body a {
+  font-weight: bold;
+}
+
 #hours {
   display: flex;
   flex-wrap: wrap;
@@ -441,4 +460,74 @@ section {
 
 #hours p:last-child {
   margin-bottom: 20px;
+}
+
+#images_container {
+  margin-top: -80px;
+  padding-bottom: 120px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#images_container > div {
+  border: 0.5px solid rgba(0,0,0,0.2);
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0px 8px 20px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+#images_container > div > div {
+  max-width: 25vw;
+  min-width: 300px;
+  padding: 20px;
+  color: #002A5C;
+}
+
+#images_container > div:first-child > div {
+  max-width: 15vw;
+  min-width: 185px;
+}
+
+#images_container img {
+  left: 100px;
+  height: 17vw;
+  border-radius: 5px 5px 0 0;
+}
+
+@media (max-width: 1200px) {
+  #images_container img {
+    height: 220px;
+  }
+}
+
+/* --------------------- TABLE FORMATTING --------------------- */
+.contact_us_table {
+	table-layout: auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.contact_us_table tr {
+  border-bottom: 1px solid #CCC;
+}
+
+.contact_us_table tr:last-child {
+  border-bottom: none;
+}
+
+.contact_us_table td {
+	padding: 10px 15px;
+  color: #333;
+}
+
+.contact_us_table td:first-child {
+  padding-left: 0;
+}
+
+/* ==================== TECH SUPPORT PAGE ==================== */
+.majorSection {
+  border-bottom: 2px solid #CCCCCC;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
 }
