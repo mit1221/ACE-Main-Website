@@ -560,6 +560,18 @@ section {
   text-align: left;
 }
 
+.no_border td {
+  border: none;
+}
+
+.no_border td:first-child {
+  border-left: 1px solid #CCC;
+}
+
+.no_border td:last-child {
+  border-right: 1px solid #CCC;
+}
+
 /* ==================== TECH SUPPORT PAGE ==================== */
 
 .majorSection {
