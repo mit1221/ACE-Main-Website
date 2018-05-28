@@ -526,6 +526,12 @@ section {
   background-color: white;
   box-shadow: 0px 8px 20px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+#images_container>div:hover {
+  box-shadow: 0px 8px 30px 5px rgba(0, 0, 0, 0.5);
 }
 
 #images_container>div>div {
