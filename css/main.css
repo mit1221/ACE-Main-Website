@@ -1,5 +1,4 @@
-/* Feb 2013 */
-
+/* May 2018 */
 ::-moz-selection {
   color: white;
   background: #5880AF;
@@ -54,7 +53,7 @@ header ul {
 header li a {
   display: block;
   color: white;
-  padding: 30px 15px;
+  padding: 30px 20px;
   border-bottom: 5px solid transparent;
   transition: 0.2s ease-out;
 }
@@ -75,6 +74,7 @@ header li svg {
   padding-right: 10px;
   float: left;
   margin-top: 2px;
+  width: 20px;
   vertical-align: middle;
 }
 
@@ -143,6 +143,10 @@ header li>a:hover:not(.active) svg g {
   pointer-events: none;
   border-bottom: 5px solid #bccbde;
   color: #bccbde;
+}
+
+.active svg g {
+  fill: #bccbde;
 }
 
 .dropdown_content .active {
@@ -468,8 +472,8 @@ h3 {
 h4 {
   font-size: 1.1em;
   font-weight: bold;
-  margin: 0;
   padding: 0;
+  margin: 0 0 10px 0;
 }
 
 .important {
@@ -585,8 +589,16 @@ section {
 
 .majorSection {
   border-bottom: 4px solid #CCCCCC;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
   margin-bottom: 40px;
+}
+
+.majorSection section:last-child {
+  margin-bottom: 0;
+}
+
+.majorSection section:last-child > :last-child {
+  margin-bottom: 0;
 }
 
 .majorSection:last-child {
@@ -602,13 +614,14 @@ section {
 
 .pdf {
   float: left;
+  height: 20px;
+  width: 20px;
   padding-right: 10px;
+  padding-left: 30px;
 }
 
-.pdf g {
-  transition: 0.2s
-}
+/* ========================= FORMS PAGE ========================= */
 
-.button:hover .pdf g {
-  fill: white;
+.forms .majorSection section:last-child > :last-child h4 {
+  margin-bottom: 0;
 }

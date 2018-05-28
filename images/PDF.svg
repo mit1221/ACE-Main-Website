@@ -1,0 +1,8 @@
+<svg viewBox="0 0 486 522" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>PDF</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="#002A5C" fill-rule="evenodd">
+        <g id="PDF">
+            <path d="M261.25,0 L52.25,0 C23.5125,0 0.26125,23.49 0.26125,52.2 L0,469.8 C0,498.51 23.25125,522 51.98875,522 L365.75,522 C394.4875,522 418,498.51 418,469.8 L418,156.6 L261.25,0 L261.25,0 Z M235,183 L235,39 L379,183 L235,183 L235,183 Z" id="Icon-Copy" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
