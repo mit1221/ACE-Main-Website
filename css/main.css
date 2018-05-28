@@ -418,7 +418,6 @@ a:hover {
   top: -0.5em;
   left: 105%;
   transition: 0.3s;
-  transition-delay: 50ms;
 }
 
 .button .tooltip_text::after {
@@ -599,4 +598,17 @@ section {
 .cost {
   font-weight: bold;
   color: #002A5C;
+}
+
+.pdf {
+  float: left;
+  padding-right: 10px;
+}
+
+.pdf g {
+  transition: 0.2s
+}
+
+.button:hover .pdf g {
+  fill: white;
 }
