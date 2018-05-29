@@ -665,6 +665,10 @@ section {
   border-right: 1px solid #002A5C;
 }
 
+button.open + .majorSection:last-child {
+  border-bottom: 1px solid #002A5C;
+}
+
 .cost {
   font-weight: bold;
   color: #002A5C;
@@ -737,4 +741,28 @@ section {
 
 .forms .majorSection section:last-child > :last-child h4 {
   margin-bottom: 0;
+}
+
+/* ========================= FILM PAGE ========================= */
+.film_page li {
+  margin: 15px 0;
+}
+
+.address mark {
+  background-color: white;
+  color: #333;
+  transition: 0.2s;
+  padding: 2px;
+}
+
+.address:hover mark {
+  background-color: #a7a3a3;
+}
+
+.address span {
+  transition: 0.2s;
+}
+
+.address:hover span {
+  margin-left: 3px;
 }

@@ -15,6 +15,7 @@
   <link rel="shortcut icon" href="images/ico.ico">
   <link rel="stylesheet" href="css/main.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <script src="js/collapsible.js"></script>
 </head>
 
 <body>
@@ -404,7 +405,7 @@
           <h3>To whom do I report equipment problems?</h3>
           <p>If the problem is not an emergency, please use the on-line form for reporting classroom and
             equipment problems, available at:</p>
-          <p><a href="../comments">Classroom and A/V Problems</a></p>
+          <a href="../comments" class="button">Classroom and A/V Problems</a>
         </section>
       </div>
 
@@ -612,31 +613,6 @@
       </nav>
     </footer>
   </div>
-
-  <script>
-    var coll = document.getElementsByClassName("collapsible");
-    var currently_open;
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("open");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-          currently_open = null;
-        } else {
-          if (currently_open != null) {
-            currently_open.classList.toggle("open");
-            currently_open.nextElementSibling.style.maxHeight = null;
-          }
-          content.style.maxHeight = content.scrollHeight + "px";
-          currently_open = this;
-        }
-      });
-    }
-
-  </script>
 </body>
 
 </html>
