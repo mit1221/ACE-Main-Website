@@ -599,15 +599,15 @@ section {
 }
 
 /* The Close Button */
-.close {
+#close {
     color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+#close:hover,
+#close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
