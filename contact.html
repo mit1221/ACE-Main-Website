@@ -15,6 +15,7 @@
   <link rel="shortcut icon" href="images/ico.ico">
   <link rel="stylesheet" href="css/main.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -160,7 +161,7 @@
     </div>
 
     <div id="images_container">
-      <div onclick="var large_img = document.createElement('IMG'); alert(event.target.src);">
+      <div>
         <img src="images/map_to_ace.png" alt="map to ace">
         <div>Map to ACE
         </div>
@@ -176,6 +177,19 @@
         <div>East Entrance to McMurrich (power door) - turn right for elevator. Accessible entrance
         </div>
       </div>
+    </div>
+
+    <!--- Image Modal --->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal_content">
+        <div class="modal_header">
+          <span class="close">&times;</span>
+          <h3 id="header_text"></h3>
+        </div>
+        <div id="modal_body" class="modal_body"></div>
+      </div>
+
     </div>
 
     <!------------------------------------------------- foooter ------------------------------------>

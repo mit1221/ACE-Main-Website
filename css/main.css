@@ -558,6 +558,69 @@ section {
   }
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 30;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content */
+.modal_content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal_header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal_body {padding: 2px 16px;}
+
 /* --------------------- TABLE FORMATTING --------------------- */
 
 .contact_us_table {
@@ -594,23 +657,12 @@ section {
 /* ==================== TECH SUPPORT PAGE ==================== */
 
 .majorSection {
-  border-bottom: 4px solid #CCCCCC;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
-}
-
-.majorSection section:last-child {
-  margin-bottom: 0;
-}
-
-.majorSection section:last-child > :last-child {
-  margin-bottom: 0;
-}
-
-.majorSection:last-child {
-  border: none;
-  padding: none;
-  margin: none;
+  padding: 0px 35px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-left: 1px solid #002A5C;
+  border-right: 1px solid #002A5C;
 }
 
 .cost {
@@ -626,7 +678,62 @@ section {
   padding-left: 30px;
 }
 
+.collapsible {
+  background-color: #a7a3a3;
+  color: white;
+  cursor: pointer;
+  padding: 22px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.collapsible:hover:not(.open) {
+    background-color: #7c7777;
+    transform: scale(1.05);
+}
+
+.open {
+    background-color: #002A5C;
+    transform: scale(1.05);
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.open:after {
+    content: "\2212";
+}
+
 /* ========================= FORMS PAGE ========================= */
+
+.majorSection2 {
+  border-bottom: 4px solid #CCCCCC;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.majorSection2 section:last-child {
+  margin-bottom: 0;
+}
+
+.majorSection2 section:last-child > :last-child {
+  margin-bottom: 0;
+}
+
+.majorSection2:last-child {
+  border: none;
+  padding: none;
+  margin: none;
+}
 
 .forms .majorSection section:last-child > :last-child h4 {
   margin-bottom: 0;
