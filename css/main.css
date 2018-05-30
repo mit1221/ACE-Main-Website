@@ -145,6 +145,10 @@ header li>a:hover:not(.active) svg g {
   color: #bccbde;
 }
 
+.active:hover {
+  color: #bccbde;
+}
+
 .active svg g {
   fill: #bccbde;
 }
@@ -308,7 +312,8 @@ header li>a:hover:not(.active) svg g {
   text-transform: uppercase;
   font-size: 1.1em;
   color: #002A5C;
-  border-bottom: 1px solid #a7a3a3;
+  border-bottom: 3px solid #a7a3a3;
+  padding-bottom: 5px;
   font-weight: bold;
   margin: 0 0 5px 0;
 }
@@ -397,9 +402,11 @@ a:hover {
   color: #002A5C;
   background: none;
   position: relative;
-  display: inline-block;
+  display: block;
   background-color: none;
   padding: 20px;
+  margin: 10px 0;
+  text-align: center;
   transition: background-color 0.3s ease-out, color 0.2s ease-out;
 }
 
@@ -420,7 +427,7 @@ a:hover {
   position: absolute;
   z-index: 1;
   top: -0.5em;
-  left: 105%;
+  right: 105%;
   transition: 0.3s;
 }
 
@@ -428,11 +435,11 @@ a:hover {
   content: "";
   position: absolute;
   top: 50%;
-  right: 100%;
+  left: 100%;
   margin-top: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent #CCC transparent transparent;
+  border-color: transparent transparent transparent #CCC;
 }
 
 .button:hover .tooltip_text {
@@ -474,6 +481,13 @@ h4 {
   font-weight: bold;
   padding: 0;
   margin: 0 0 10px 0;
+}
+
+.title {
+  color: #333;
+  font-size: 1.8em;
+  padding-bottom: 5px;
+  border-bottom: 4px solid #333;
 }
 
 .important {
@@ -759,9 +773,9 @@ button.open + .majorSection:last-child {
   margin-bottom: 0;
 }
 
-.majorSection2 section:last-child > :last-child {
+/* .majorSection2 section:last-child > :last-child {
   margin-bottom: 0;
-}
+} */
 
 .majorSection2:last-child {
   border: none;
@@ -771,6 +785,38 @@ button.open + .majorSection:last-child {
 
 .forms .majorSection section:last-child > :last-child h4 {
   margin-bottom: 0;
+}
+
+.costs_table {
+  table-layout: auto;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.costs_table th {
+  background-color: #a7a3a3;
+  color: white;
+  padding: 5px 0;
+}
+
+.costs_table tr:last-child {
+  border-bottom: none;
+}
+
+.costs_table td {
+  padding: 10px 15px;
+  color: #333;
+  border: 1px solid #CCC;
+}
+
+.costs_table td:first-child {
+  text-align: left;
+}
+
+.no_border td:first-child {
+  border-top: none;
+  border-bottom: none;
 }
 
 /* ========================= FILM PAGE ========================= */
