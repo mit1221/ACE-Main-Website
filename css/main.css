@@ -404,6 +404,7 @@ a:hover {
   position: relative;
   display: block;
   background-color: none;
+  max-width: 320px;
   padding: 20px;
   margin: 10px 0;
   text-align: center;
@@ -851,7 +852,7 @@ button.open + .majorSection:last-child {
 }
 
 /* ========================= FILM PAGE ========================= */
-.film_page li {
+.more_line_height li {
   margin: 15px 0;
 }
 
