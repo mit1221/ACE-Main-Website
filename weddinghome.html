@@ -15,7 +15,7 @@
   <link rel="shortcut icon" href="images/ico.ico">
   <link rel="stylesheet" href="css/main.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-  <script src="js/collapsible.js"></script>
+  <script src="js/interactive_map.js"></script>
 </head>
 
 <body>
@@ -90,7 +90,7 @@
         <section>
           <h3>How to Book</h3>
           <ul>
-            <li>Pick a site (use <a href="#map">location map</a>)</li>
+            <li>Pick a site (use <a href="#map_canvas">location map</a>)</li>
             <li>Read our <a href="policies.html#wp">policies</a> for pricing and info</li>
             <li>Fill out the <a href="forms.html#wpsr">site request form</a> and submit to our office</li>
             <li>Deliver payment to us and recieve letter of permission, to be taken with you on the day of
@@ -107,6 +107,32 @@
               or with other wedding parties</li>
           </ul>
         </section>
+
+
+        <!------------------------- INTERACTIVE MAP ------------------------->
+        <div id="map_canvas">
+          <ul id="map_navigation">
+            <li><button class="active"><strong>1 </strong>University College South</button></li>
+            <li><button><strong>2 </strong>Simcoe Hall</button></li>
+            <li><button><strong>3 </strong>Sandford Fleming Building</button></li>
+            <li><button><strong>4 </strong>Sigmund Samuel Building</button></li>
+            <li><button><strong>5 </strong>Canadiana Building</button></li>
+            <li><button><strong>6 </strong>McMurrich Building</button></li>
+            <li><button><strong>7 </strong>Tanz Building</button></li>
+            <li><button><strong>8 </strong>Sigmund Samuel Walkway</button></li>
+          </ul>
+          <div id="map">
+            <div class="circle" id="1" style="top: 110px; left: 150px;">1</div>
+            <div class="circle" id="2" style="top: 230px; left: 110px;">2</div>
+            <div class="circle" id="3" style="top: 340px; left: 165px;">3</div>
+            <div class="circle" id="4" style="top: 215px; left: 260px;">4</div>
+            <div class="circle" id="5" style="top: 215px; left: 350px;">5</div>
+            <div class="circle" id="6" style="top: 270px; left: 345px;">6</div>
+            <div class="circle" id="7" style="top: 350px; left: 380px;">7</div>
+            <div class="circle" id="8" style="top: 160px; left: 325px;">8</div>
+            <div class="rectangle" id="ace" style="top: 290px; left: 250px;">ACE</div>
+          </div>
+        </div>
       </div>
 
       <div class="right">
