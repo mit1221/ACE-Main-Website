@@ -1,6 +1,18 @@
 window.onload = function() {
-  var coll = document.getElementsByClassName("collapsible");
+  var hash = window.location.hash;
   var currently_open = [];
+
+  //Opening a section automatically on page load
+  if (hash != '') {
+    var target_element = document.getElementById(hash.substr(1));
+    target_element.classList.toggle("open");
+    var target_content = target_element.nextElementSibling;
+    target_content.style.maxHeight = target_content.scrollHeight + "px";
+    currently_open.push(target_element);
+  }
+
+  //Opening a section when clicked
+  var coll = document.getElementsByClassName("collapsible");
 
   for (var i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {

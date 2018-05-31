@@ -580,8 +580,7 @@ section {
   left: 0;
   top: 0;
   width: 100%;
-  padding-top: 70px;
-  min-width: 1200px;
+  padding-top: 5vh;
   height: 100%;
   overflow: auto;
   background-color: rgb(0,0,0); /* Fallback color */
@@ -595,17 +594,70 @@ section {
   margin: auto;
   padding: 0;
   border-radius: 10px;
-  width: 60%;
+  width: 80%;
+  max-width: 1000px;
   box-shadow: 0px 8px 20px 0 rgba(0, 0, 0, 0.2);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
 }
 
 .animateout {
   animation-name: animateout;
   animation-duration: 0.4s;
+}
+
+.modal_header {
+  padding: 10px 16px;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  font-size: 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal_body {
+  text-align: center;
+}
+
+.modal_body img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+  .modal {
+    padding-top: 130px;
+  }
+
+  .modal_content {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .modal_header {
+    border-radius: 0;
+  }
+
+  .modal_body img {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .modal {
+    padding-top: 150px;
+  }
+
+  .modal_header {
+    top: -130px;
+    background: none;
+  }
 }
 
 /* Add Animation */
@@ -642,27 +694,6 @@ section {
 #close:focus {
   color: #bccbde;
   cursor: pointer;
-}
-
-.modal_header {
-  padding: 10px 16px;
-  box-sizing: border-box;
-  position: absolute;
-  width: 100%;
-  background-color: rgba(0,0,0,0.7);
-  color: white;
-  font-size: 20px;
-  border-radius: 10px 10px 0 0;
-}
-
-.modal_body {
-  text-align: center;
-}
-
-.modal_body img {
-  width: 100%;
-  max-height: 80vh;
-  border-radius: 10px;
 }
 
 /* --------------------- TABLE FORMATTING --------------------- */
