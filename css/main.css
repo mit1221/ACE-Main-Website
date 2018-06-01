@@ -883,19 +883,6 @@ button.open + .majorSection:last-child {
 
 /* ======================= WEDDINGS PAGE ======================= */
 
-#map_canvas {
-  position: relative;
-  left: 220px;
-}
-
-#map {
-  background-image: url("../images/wedding_locations/map.jpg");
-  height: 500px;
-  width: 575px;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 .circle {
   border-radius: 50px;
   height: 30px;
@@ -904,7 +891,7 @@ button.open + .majorSection:last-child {
   color: white;
   text-align: center;
   line-height: 30px;
-  position: absolute;
+  position: relative;
   transition: 0.1s;
   cursor: pointer;
 }
@@ -912,12 +899,12 @@ button.open + .majorSection:last-child {
 .rectangle {
   border-radius: 5px;
   height: 30px;
-  padding: 0 10px;
+  width: 50px;
   background: #002A5C;
   color: white;
   text-align: center;
   line-height: 30px;
-  position: absolute;
+  position: relative;
   transition: 0.1s;
   cursor: pointer;
 }
@@ -929,14 +916,46 @@ button.open + .majorSection:last-child {
   background-color: #022146;
 }
 
+#map_canvas {
+  position: relative;
+  display: flex;
+  height: 500px;
+}
+
+#map {
+  background-image: url("../images/wedding_locations/map.jpg");
+  height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex: 0 0 418px;
+  border-bottom: 3px solid #002A5C;
+  border-left: 3px solid #002A5C;
+  border-right: 3px solid #002A5C;
+}
+
+.right_side {
+  border-right: 3px solid #002A5C;
+  border-bottom: 3px solid #002A5C;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map_image {
+  width: 90%;
+  max-width: 500px;
+}
+
+.right_side button {
+  flex: 1;
+}
+
 #map_navigation {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 220px;
-  height: 100%;
-  left: -220px;
-  position: absolute;
   display: flex;
   flex-direction: column;
 }
@@ -956,7 +975,8 @@ button.open + .majorSection:last-child {
   font-family: 'Open Sans', Verdana, Geneva, Sans-Serif, Arial, Helvetica;
   font-size: 13px;
   background-color: #002A5C;
-  padding: 0 5px;
+  padding: 0 10px;
+  cursor: pointer;
   transition: 0.2s;
 }
 
@@ -971,8 +991,9 @@ button.open + .majorSection:last-child {
 #map_navigation li button img {
   border-radius: 5px;
   margin-right: 10px;
-  height: 35px;
-  width: 35px;
+  float: left;
+  height: 40px;
+  width: 40px;
   display: inline;
   vertical-align: middle;
 }
@@ -985,4 +1006,17 @@ button.open + .majorSection:last-child {
 #map_navigation .active {
   background-color: #bccbde;
   color: #002A5C;
+}
+
+@media (max-width: 1600px) {
+  #map_navigation li button {
+    text-align: center;
+    padding: 10px 5px;
+  }
+
+  #map_navigation li button img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
 }
