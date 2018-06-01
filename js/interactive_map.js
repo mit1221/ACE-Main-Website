@@ -5,9 +5,9 @@ window.onload = function() {
     for (var j = 0; j < current_buttons.length; j++) {
       current_buttons[j].addEventListener('click', function() {
         var image = document.createElement('IMG');
-        image.src = '../images/wedding_locations/' + i + '.jpg';
+        image.src = 'images/wedding_locations/' + this.classList[0] + '.jpg';
         document.getElementById('map_canvas').appendChild(image);
-      })
+      });
     }
   }
 }
