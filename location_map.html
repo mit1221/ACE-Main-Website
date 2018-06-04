@@ -76,15 +76,15 @@
       <!------------------------- INTERACTIVE MAP ------------------------->
       <div id="map_canvas">
         <ul id="map_navigation">
-          <li><button class="1"><img src="images/wedding_locations/1.jpg" alt="1" /><p><strong>1 </strong>University College South</p></button></li>
-          <!-- <li><button class="2"><img src="images/wedding_locations/2.jpg" alt="2" /><p><strong>2 </strong>University College West</p></button></li> -->
-          <li><button class="2"><img src="images/wedding_locations/2.jpg" alt="2" /><p><strong>2 </strong>Simcoe Hall</p></button></li>
-          <li><button class="3"><img src="images/wedding_locations/3.jpg" alt="3" /><p><strong>3 </strong>Sandford Fleming Bldg</p></button></li>
-          <li><button class="4"><img src="images/wedding_locations/4.jpg" alt="4" /><p><strong>4 </strong>Sigmund Samuel Bldg</p></button></li>
-          <li><button class="5"><img src="images/wedding_locations/5.jpg" alt="5" /><p><strong>5 </strong>Canadiana Building</p></button></li>
-          <li><button class="6"><p><img src="images/wedding_locations/6.jpg" alt="6" /><strong>6 </strong>McMurrich Building</p></button></li>
-          <li><button class="7"><p><img src="images/wedding_locations/7.jpg" alt="7" /><strong>7 </strong>Tanz Building</p></button></li>
-          <li><button class="8"><p><img src="images/wedding_locations/8.jpg" alt="8" /><strong>8 </strong>Sigmund Samuel Walkway</p></button></li>
+          <li><button><img src="images/wedding_locations/1.jpg" alt="1" /><p><strong>1 </strong>University College South</p></button></li>
+          <li style="display: none"><button><img src="images/wedding_locations/2.jpg" alt="2" /><p><strong>2 </strong>University College West</p></button></li>
+          <li><button><img src="images/wedding_locations/2.jpg" alt="2" /><p><strong>2 </strong>Simcoe Hall</p></button></li>
+          <li><button><img src="images/wedding_locations/3.jpg" alt="3" /><p><strong>3 </strong>Sandford Fleming Bldg</p></button></li>
+          <li><button><img src="images/wedding_locations/4.jpg" alt="4" /><p><strong>4 </strong>Sigmund Samuel Bldg</p></button></li>
+          <li><button><img src="images/wedding_locations/5.jpg" alt="5" /><p><strong>5 </strong>Canadiana Building</p></button></li>
+          <li><button><p><img src="images/wedding_locations/6.jpg" alt="6" /><strong>6 </strong>McMurrich Building</p></button></li>
+          <li><button><p><img src="images/wedding_locations/7.jpg" alt="7" /><strong>7 </strong>Tanz Building</p></button></li>
+          <li><button><p><img src="images/wedding_locations/8.jpg" alt="8" /><strong>8 </strong>Sigmund Samuel Walkway</p></button></li>
         </ul>
         <div id="map">
           <div class="1 circle" style="top: 110px; left: 150px;">1</div>
@@ -101,13 +101,22 @@
         <!-- <script src="https://360player.io/static/dist/scripts/embed.js" async></script>
           <iframe src="https://360player.io/p/v6RJKH/" frameborder="0" width=560 height=315 allowfullscreen data-token="v6RJKH"></iframe> -->
         <div class="right_side">
-          <img class="map_image" src="images/wedding_locations/1.jpg" alt="">
-          <div class="buttons">
-            <button>Previous</button>
-            <button>Streetview</button>
-            <button>Larger Image</button>
-            <button>Next</button>
+          <div id="nothing_selected">Please select a location to view more information.</div>
+          <div id="street_view_container">
+            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?hnear=77+Gerrard+St+W,+Toronto,+Ontario+M5G+2A7&amp;t=m&amp;layer=c&amp;cbll=43.662253,-79.395883&amp;panoid=nmcFYTmyQjgoUvvJiuiTkw&amp;cbp=12,344.84,,0,10.2&amp;ie=UTF8&amp;ll=43.661337,-79.390662&amp;spn=0.011084,0.023217&amp;z=16&amp;source=embed&amp;output=svembed"></iframe>
+            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?hnear=77+Gerrard+St+W,+Toronto,+Ontario+M5G+2A7&amp;t=m&amp;layer=c&amp;cbll=43.661064,-79.395839&amp;panoid=yuNzRQuqKGws7I7AjSRXxw&amp;cbp=12,213.15,,0,-7.07&amp;ie=UTF8&amp;ll=43.660947,-79.395677&amp;spn=0.001385,0.002902&amp;z=19&amp;source=embed&amp;output=svembed"></iframe>
+            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?hnear=77+Gerrard+St+W,+Toronto,+Ontario+M5G+2A7&amp;t=m&amp;layer=c&amp;cbll=43.660495,-79.394614&amp;panoid=tV-S0o1qFCHJ-Xhrfzx49Q&amp;cbp=12,221.55,,0,9.76&amp;ie=UTF8&amp;ll=43.660157,-79.394251&amp;spn=0.002771,0.005804&amp;z=18&amp;source=embed&amp;output=svembed"></iframe>
+
           </div>
+          <img id="map_image" />
+          <div class="buttons">
+            <button class="button" onclick="change_location(-1)">&#8249; Previous</button>
+            <button class="button" onclick="street_view()">Streetview</button>
+            <button class="button" onclick="enlarge()">Larger Image</button>
+            <button class="button" onclick="change_location(1)">Next &#8250;</button>
+          </div>
+          <h3 id="info_title"></h3>
+          <p id="info"></p>
         </div>
       </div>
     </div>

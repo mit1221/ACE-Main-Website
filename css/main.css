@@ -892,7 +892,7 @@ button.open + .majorSection:last-child {
   text-align: center;
   line-height: 30px;
   position: relative;
-  transition: 0.1s;
+  transition: 0.3s;
   cursor: pointer;
 }
 
@@ -909,11 +909,13 @@ button.open + .majorSection:last-child {
   cursor: pointer;
 }
 
-.circle:hover, .rectangle:hover {
+.circle:hover, .circle.active, .circle.current, .rectangle:hover {
   transform: scale(1.3);
   -ms-transform: scale(1.3);
   -webkit-transform: scale(1.3);
-  background-color: #022146;
+  background-color: #bccbde;
+  border: none;
+  color: #002A5C;
 }
 
 #map_canvas {
@@ -924,18 +926,19 @@ button.open + .majorSection:last-child {
 
 #map {
   background-image: url("../images/wedding_locations/map.jpg");
-  height: 500px;
+  height: auto;
   background-size: contain;
   background-repeat: no-repeat;
-  flex: 0 0 418px;
+  flex: 0 0 414px;
+  border-top: 3px solid #002A5C;
   border-bottom: 3px solid #002A5C;
-  border-left: 3px solid #002A5C;
   border-right: 3px solid #002A5C;
 }
 
 .right_side {
   border-right: 3px solid #002A5C;
   border-bottom: 3px solid #002A5C;
+  border-top: 3px solid #002A5C;
   padding: 20px;
   flex: 1;
   display: flex;
@@ -943,13 +946,23 @@ button.open + .majorSection:last-child {
   align-items: center;
 }
 
-.map_image {
+#map_image {
   width: 90%;
   max-width: 500px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .right_side button {
   flex: 1;
+  display: inline;
+  cursor: pointer;
+  outline: none;
+  padding: 8px 15px;
+}
+
+.right_side h3 {
+  margin: 0;
 }
 
 #map_navigation {
@@ -1006,17 +1019,28 @@ button.open + .majorSection:last-child {
 #map_navigation .active {
   background-color: #bccbde;
   color: #002A5C;
+  transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  box-shadow: 0px 8px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 1600px) {
-  #map_navigation li button {
-    text-align: center;
-    padding: 10px 5px;
-  }
+#nothing_selected {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #CCC;
+  padding: 10px;
+  flex: 1;
+}
 
-  #map_navigation li button img {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
+#street_view_container {
+  width: 100%;
+  flex: 1;
+}
+
+iframe {
+  display: none;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
 }
