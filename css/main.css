@@ -1038,9 +1038,18 @@ button.open + .majorSection:last-child {
   flex: 1;
 }
 
+#map_footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+}
+
 iframe {
   display: none;
-  width: 80%;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
 }
