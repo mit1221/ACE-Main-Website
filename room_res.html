@@ -15,6 +15,7 @@
   <link rel="shortcut icon" href="images/ico.ico">
   <link rel="stylesheet" href="css/main.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <script src="js/collapsible.js"></script>
 </head>
 
 <body>
@@ -73,9 +74,248 @@
     <div class="wrapper2">
       <h1>Room Reservation<br><a target="_blank" href="http://www.utoronto.ca"><span class="sub_title">University of Toronto, Downtown Campus <span>&#10140;</span></span></a></h1>
       <h3>Book rooms for:</h3>
-      <h4><a href="../booking_request">INTERNAL University Departments</a></h4>
-      <h4><a href="campusgrps.html">CAMPUS GROUPS</a></h4>
-      <h4><a href="room_res_ext.html">EXTERNAL GROUPS (non-University)</a></h4>
+      <select id="room_booking">
+        <option value="" disabled selected>Select option</option>
+        <option value="">INTERNAL University Departments</option>
+        <option value="">CAMPUS GROUPS</option>
+        <option value="">EXTERNAL GROUPS (non-University)</option>
+      </select>
+
+      <section class="majorSection2">
+        <!--------------------------------- INTERNAL --------------------------------->
+        <div class="internal">
+          <p>Form goes here</p>
+        </div>
+
+        <!---------------------------------- CAMPUS ---------------------------------->
+        <div class="campus">
+
+        </div>
+
+        <!--------------------------------- EXTERNAL --------------------------------->
+        <div class="external">
+
+        </div>
+      </section>
+      <section class="majorSection2">
+        <button class="collapsible">Room Booking Information</button>
+        <div class="majorSection">
+          <section>
+            <p>Most classrooms on the St. George campus are booked via the <strong>Room Reservation System - RRS</strong>.
+              Most conference rooms and lounges,and some seminar rooms are not yet available on the RRS,
+              and must be booked directly through the college, faculty or department to which they belong.
+              The major assembly space holders on campus not represented on the RRS include:
+              <a href="nonrrs.html">Hart House, the Faculty of Music and the Federated Universities & Colleges</a>.
+            </p>
+          </section>
+          <section>
+
+          </section>
+        </div>
+
+        <button class="collapsible">Room Rental Rates</button>
+        <div class="majorSection">
+          <section>
+            <p class="important">The following rates are guideline only. Please call ACE for actual rate quotation.</p>
+            <h3>External Rates for Room Reservation</h3>
+            <p>Room rental is charged by the hour and varies according to seating capacity. External rates
+              apply to those groups who are not associated or affiliated with the University.
+            </p>
+          </section>
+          <section>
+            <h3>Internal Rates for Room Reservation</h3>
+            <p>Internal rates are charged to groups which are formally recognized by the University. The
+              following rates are per hour:
+            </p>
+          </section>
+        </div>
+
+        <button class="collapsible">Policy on the Recognition of Campus Groups</button>
+        <div class="majorSection">
+          <section>
+            <a href="documents/ACTUS_Annoucement_to_Campus_Groups.pdf" target="_blank">Changes for Campus Group bookings Oct 2012 - PDF</a>
+            <p>Voluntary organizations formed by members of the University community are a traditional part
+              of campus life, and contribute in a significant way to its intellectual, political, social
+              and cultural diversity and richness.
+            </p>
+            <p>In its relations with these organizations, the University is guided by a commitment to the
+              right of University members to communicate and to discuss and explore all ideas, to organize
+              groups for any lawful purpose, to move about the University and to use its facilities in
+              any reasonable way, to distribute on campus, in a responsible way, published material provided
+              that is not unlawful, to hold meetings, to debate and to engage in peaceful demonstrations,
+              and to freedom from discrimination on the basis of sex, race or religion.
+            </p>
+            <p>Recognition as a "campus group" is a privilege based upon observance of certain procedures
+              and acceptance of certain responsibilities. It follows that this privilege can be withdrawn
+              if these procedures are neglected or responsibilities abrogated by the organization or
+              group.
+            </p>
+            <p>Under the terms of this policy the University will not attempt to censor, control or interfere
+              with any group on the basis of its philosophy, beliefs, interests or opinions expressed
+              unless and until these lead to activities which are illegal or which infringe the rights
+              and freedoms already mentioned. By the same token, recognition as a "campus group" by the
+              University implies neither endorsement of a particular group's beliefs or philosophy, nor
+              the assumption of legal liability for the group's activities. It assumes only that the
+              University has a responsibility to inform itself of organizations which use its facilities
+              and name and to deny or withdraw recognition if the requirements of this policy are not
+              observed.
+            </p>
+            <p>1.(a) The University should maintain a policy and mechanism for the recognition of campus
+              organizations. All such organizations wishing to use "University of Toronto" in their names
+              and all groups wishing to claim internal status under the <a href="room_res.html#gp" onclick="window.location.reload();">Policy for the Allocation of
+              Rooms</a> - Extracurricular Bookings must be recognized. (b) Responsibility for the maintenance
+              of the policy and mechanism, where campus-wide organizations or organizations drawing members
+              from more than one division or constituency of the University are concerned, should be
+              vested in the Committee on Campus and Community Affairs of the Governing Council. (c) The
+              responsibility for recognition of organizations drawing members from only one division
+              should rest with the council of that division.
+            </p>
+            <p>2. Eligibility for recognition should be assessed annually against the following "technical"
+              constitutional areas rather than ideological ones:
+            </p>
+            <p>(a) The objectives and activities of groups seeking recognition should be seen as attempting
+              to contribute to the educational, recreational, social or cultural value of the University.
+              These values are intended to be interpreted in the broadest sense. However, the essential
+              "value" of the University must remain that of preservation of freedom of enquiry and association.
+            </p>
+            <p>(b) Recognized campus groups may not engage in activities which are essentially commercial
+              in nature. This is not intended to preclude the collection of membership fees to cover
+              the expenses of the organization, or of charges for specific activities, programs or events,
+              or to prohibit groups from engaging in legitimate fundraising. However, a recognized campus
+              group cannot
+            </p>
+            <p>(i) have as a major activity a function that makes it an on-campus part of a commercial organization;
+            </p>
+            <p>(ii) provide services and goods at a profit when that profit is used for purposes other than
+              those of the organization;
+            </p>
+            <p>(iii) pay salaries to some or all of its officers.
+            </p>
+            <p>(c) Membership in groups should be open to all members of the University community without
+              restriction on the grounds of national origin, race, religion, colour, or sex. While discriminatory
+              membership practices are not allowed, it is recognized that certain groups could well be
+              homogenous in nature without being discriminatory. Status as non-voting members may be
+              extended to interested persons from outside the University.
+            </p>
+            <p>(d) The University's interest in the constitution is based on its concern that organizations
+              and individuals using its name and its facilities are genuine campus organizations, and
+              that they pursue activities in accordance with the law, and in addition that such things
+              as organizational structure, membership, procedures, rules of conduct, etc. are spelled
+              out so that all members who join a club and take part in its activities may do so with
+              full knowledge of their rights and responsibilities within the group.
+            </p>
+            <p>3. (a) The University will not attempt to monitor or review the activities of a group in
+              the normal course of events. It will however investigate complaints or charges that an
+              organization has acted in a manner that is inconsistent with its constitution or with the
+              requirements of this policy. If these complaints or charges prove to be valid, recognition
+              may be withdrawn. Application for a renewal of recognition may be made at any time after
+              the following September 30.
+            </p>
+            <p>(b) Responsibility for the implementation of this policy is delegated to the administration.
+              In the case of denial or withdrawal of recognition, a statement of the reasons will be
+              provided. All administrative decisions to grant, deny or withdraw recognition will be reported
+              regularly to the Committee on Campus and Community Affairs for information.
+            </p>
+            <p>(c) Groups wishing to appeal a decision may do so through the Office of the Assistant Vice-President
+              - Student Affairs. In the event of an appeal, a hearing shall be held by an administrative
+              officer designated by the Assistant Vice-President - Student Affairs not involved in the
+              original decision.
+            </p>
+            <p>4. Groups seeking recognition should supply the following:
+            </p>
+            <p>(a) An application in the form prescribed.
+            </p>
+            <p>(b) The names of two officers and a "contact person" (who could be one of the officers) responsible
+              for all room bookings and rentals of University equipment and services, a mailing address
+              and a telephone number. This information will be considered to be public information.
+            </p>
+            <p>(c) The total number of members, the size of the governing body (i.e., number of executive
+              officers), and the proportion of members on and off campus at the time of registration.
+            </p>
+            <p>(d) A copy of the constitution and/or by-laws of the group.
+            </p>
+            <p>Groups meeting the requirements of this policy will be granted recognition for the academic
+              year in which application is made. (For this purpose the academic year is considered to
+              run from October 1 to September 30.)
+            </p>
+            <p>Normally recognition will be renewed automatically in successive academic years upon request
+              by the new executive. If constitutional changes have been proposed the amended constitution
+              should be submitted and will be considered in the course of the renewal process.
+            </p>
+            <p>5. Applicants for recognition or recognized groups handling extensive funds may be required
+              to submit audited statements annually to the Office of the Assistant Vice-President - Student
+              Affairs.
+            </p>
+            <p>At the discretion of the Assistant Vice-President - Student Affairs groups supplying goods
+              or services for which a charge is made may be required to indicate in all advertising,
+              contractual and other material that the University neither endorses the group's activities
+              nor assumes legal liability in connection with the goods and services provided.
+            </p>
+          </section>
+        </div>
+
+        <button class="collapsible">Equipment & Services Including <strong>AV</strong></button>
+        <div class="majorSection">
+          <section>
+            <p class="title">A/V Rentals and Services</p>
+            <p>Please note that
+              <span class="important">A/V EQUIPMENT IS NOT INCLUDED IN THE ROOM RENTAL</span> and all
+              requests for A/V equipment or technician services require 6 working days advance notice.
+            </p>
+            <p>For all centrally available classrooms, please contact ACE:</p>
+          </section>
+          <section>
+            <p class="title">Food Catering</p>
+            <p>You may use the caterer of your choice in most areas including the following University cafeteria
+              facilities which are currently under contract to:
+            </p>
+          </section>
+          <section>
+            <p class="title">Furniture Requests</p>
+            <p>The majority of our space is setup classroom or lecture style.</p>
+            <p>Should you require a special setup (where scheduling and/or space permits) or additional
+              furniture for registration tables, please discuss this with a reservation officer at the
+              time of booking. Additional charges may result.
+            </p>
+          </section>
+          <section>
+            <p class="title">Parking</p>
+            <p>Paid public parking is available throughout the campus at all times.
+              <br>For details contact Parking Services at:
+              <a href="http://www.parking.utoronto.ca">http://www.parking.utoronto.ca</a>
+            </p>
+          </section>
+          <section>
+            <p class="title">Services for Disabled Persons</p>
+            <p>For advice or information concerning building and room accessibility, contact Accessibility
+              Services:
+            </p>
+            <p>Telephone: 416 - 978 - 8060 (also T.D.D.)</p>
+            <p>Campus-wide accessibility services:
+              <a href="http://www.accessibility.utoronto.ca">http://www.accessibility.utoronto.ca </a>
+            </p>
+          </section>
+          <section>
+            <p class="title">Ticketing</p>
+            <p>Ticket printing and box-office services are available from UofT Tix.</p>
+            <p>Telephone: 416 - 978 - 8849 </p>
+            <a href="http://www.uofttix.ca/">http://www.uofttix.ca/</a>
+          </section>
+        </div>
+
+        <button class="collapsible" id="gp">Guidelines & Procedures</button>
+        <div class="majorSection">
+          <section>
+            <p>Download PDF: (PDF will open in new window, or right-click to "save-as")</p>
+            <h4>Guidelines for Central Room Allocation:</h4>
+            <a href="#"></a>
+            <h4>Procedures for the Temporary Use of Space:</h4>
+            <a href=""></a>
+            <h4>Policy for the Temporary Use of Space:</h4>
+            <a href=""></a>
+          </section>
+        </div>
+      </section>
     </div>
 
     <!------------------------------------------------- foooter ------------------------------------>

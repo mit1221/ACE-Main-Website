@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function abc() {
   var hash = window.location.hash;
   var currently_open = [];
 

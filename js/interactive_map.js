@@ -72,6 +72,7 @@ function showInfo() {
   }
 
   image.style.display = 'block';
+  image.style.height = 'auto';
   larger_map.style.display = 'none';
   street_view_button.innerHTML = 'Streetview';
 
@@ -101,28 +102,28 @@ function showInfo() {
 
   switch (current_slide) {
     case 1:
-      body.innerHTML = "15 King's College Circle, Built in 1858, Photo taken facing North";
+      body.innerHTML = "15 King's College Circle, Toronto, ON M5S 3H7<br>Built in 1858, Photo taken facing North";
       break;
     case 2:
-      body.innerHTML = "27 King's College Circle, Built in 1924, Photo Taken facing South";
+      body.innerHTML = "27 King's College Circle, Toronto, ON M5S 1A1<br>Built in 1924, Photo Taken facing South";
       break;
     case 3:
-      body.innerHTML = "10 King's College Road, Built in 1907, Photo Taken facing West";
+      body.innerHTML = "10 King's College Road, Toronto, ON M5S 3G4<br>Built in 1907, Photo Taken facing West";
       break;
     case 4:
-      body.innerHTML = "7 King's College Circle, Built in 1892, Photo taken facing East (just south of the Gerstein Library)";
+      body.innerHTML = "7 King's College Circle, Toronto, ON M5S 3K1<br>Built in 1892, Photo taken facing East (just south of the Gerstein Library)";
       break;
     case 5:
-      body.innerHTML = "14 Queen's Park Crescent West, Built in 1950, Photo taken facing West";
+      body.innerHTML = "14 Queen's Park Crescent West, Toronto, ON M5S 3K9<br>Built in 1950, Photo taken facing West";
       break;
     case 6:
-      body.innerHTML = "12 Queen's Park Crescent West, Built in 1923, Photo taken facing West";
+      body.innerHTML = "12 Queen's Park Crescent West, Toronto, ON M5S 1S8<br>Built in 1923, Photo taken facing West";
       break;
     case 7:
-      body.innerHTML = "6 Queen's Park Crescent West, Built in 1932, Facing Queen's Park";
+      body.innerHTML = "6 Queen's Park Crescent West, Toronto, ON M5S 3H2<br>Built in 1932, Facing Queen's Park";
       break;
     case 8:
-      body.innerHTML = "East Side of Sigmund Samual Library, Taken in Early Spring (May) 2004";
+      body.innerHTML = "East Side of Sigmund Samual Library, Toronto, ON M5S 3K1<br>Taken in Early Spring (May) 2004";
       break;
     default:
       body.innerHTML = '';
