@@ -5,7 +5,7 @@ window.onload = function() {
   //Opening a section automatically on page load
   if (hash != '') {
     var target_element = document.getElementById(hash.substr(1));
-    if (target_element != null) {
+    if (target_element != null && target_element.nodeName == 'BUTTON') {
       target_element.classList.toggle("open");
       var target_content = target_element.nextElementSibling;
       target_content.style.maxHeight = target_content.scrollHeight + "px";
