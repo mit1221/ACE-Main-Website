@@ -1110,31 +1110,42 @@ iframe {
   background: #CCCCCC;
   border-radius: 10px;
   padding: 20px 20px;
-  max-width: 1400px;
   margin: 0 auto;
   margin-bottom: 30px;
+  max-width: 1400px;
 }
 
-.image_gallery div {
+.image_gallery > div {
   display: flex;
   margin-bottom: 15px;
 }
 
-.image_gallery img {
+.image_gallery > div > div {
   flex: 1;
   padding: 0 20px;
   border-right: 4px solid #a7a3a3;
 }
 
-.image_gallery div img:first-child {
+.image_gallery img {
+  width: 100%;
+  height: 100%;
+}
+
+.image_gallery > div > div:first-child {
   padding-left: 0;
+}
+
+.image_gallery > div > div:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.image_gallery > div > div:first-child img {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-.image_gallery div img:last-child {
-  border-right: none;
-  padding-right: 0;
+.image_gallery > div > div:last-child img {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
