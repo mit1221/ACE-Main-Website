@@ -1104,3 +1104,37 @@ iframe {
 #internal, #internal_right, #campus, #campus_right, #external, #external_right {
   transition: 0.4s ease-in;
 }
+
+/* ======================= TRANSFORMING PAGE ======================= */
+.image_gallery {
+  background: #CCCCCC;
+  border-radius: 10px;
+  padding: 20px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.image_gallery div {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.image_gallery img {
+  flex: 1;
+  padding: 0 20px;
+  border-right: 4px solid #a7a3a3;
+}
+
+.image_gallery div img:first-child {
+  padding-left: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.image_gallery div img:last-child {
+  border-right: none;
+  padding-right: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
