@@ -80,24 +80,30 @@
       </nav>
     </header>
 
-    <div class="wrapper2">
-      <h1>Room Reservation<br><a target="_blank" href="http://www.utoronto.ca"><span class="sub_title">University of Toronto, Downtown Campus <span>&#10140;</span></span></a></h1>
-      <section class="majorSection2">
-        <h3>Book rooms for:</h3>
-        <select id="room_booking" onchange="booking()">
+    <div class="wrapper">
+      <div id="sidebar">
+        <a onclick="open_collapsible('rbi')" class="sidebar_card">Room Booking Information</a>
+        <a onclick="open_collapsible('rates')" class="sidebar_card">Room Rental Rates</a>
+        <a onclick="open_collapsible('es')" class="sidebar_card">Equipment & Services Including <strong>AV</strong></a>
+        <a onclick="open_collapsible('gp')" class="sidebar_card">Guidelines & Procedures</a>
+      </div>
+      <div id="main">
+        <h1>Room Reservation<br><a target="_blank" href="http://www.utoronto.ca"><span class="sub_title">University of Toronto, Downtown Campus <span>&#10140;</span></span></a></h1>
+        <section class="majorSection2">
+          <h3 style="display: inline">Book rooms for: &nbsp;</h3>
+          <select id="room_booking" onchange="booking()">
           <option value="i" selected>Internal University Departments</option>
           <option value="cg">Campus Groups</option>
           <option value="e">External Groups (non-University)</option>
         </select>
-        <!--------------------------------- INTERNAL --------------------------------->
-        <div id="internal">
-          <h3>Internal University Departments</h3>
-          <a href="../booking_request">Go to online form</a>
-        </div>
+          <!--------------------------------- INTERNAL --------------------------------->
+          <div id="internal">
+            <h3>Internal University Departments</h3>
+            <a href="../booking_request">Go to online form</a>
+          </div>
 
-        <!---------------------------------- CAMPUS ---------------------------------->
-        <div id="campus">
-          <div class="body">
+          <!---------------------------------- CAMPUS ---------------------------------->
+          <div id="campus">
             <h3>Campus Groups</h3>
             <p>The Academic and Campus Events will book classrooms <strong>free of charge</strong> to
               <strong>recognized Campus Groups</strong> with the following conditions:
@@ -163,29 +169,388 @@
                 debt is settled.</p>
             </section>
           </div>
-          <section class="links">
-            <a href="policies.html#cg" class="button">Policy on the Recognition of Campus Groups</a>
-            <a href="policies.html#bp" class="button">Booking Policy on Recognized Campus Groups</a>
-            <a href="policies.html#cfcgb" class="button">New AV Booking Policy for Recognized Campus Groups</a>
-            <a href="forms.html#cgb" class="button">Facilities Request Form</a>
-          </section>
-        </div>
 
-        <!--------------------------------- EXTERNAL --------------------------------->
-        <div id="external">
-          <div class="body">
+          <!--------------------------------- EXTERNAL --------------------------------->
+          <div id="external">
             <h3>External Groups (non-University)</h3>
             <p>External groups are groups not directly a part of the University's academic, athletic or
               administrative body.
             </p>
-            <p>For enquiries, external groups can contact us at:</p>
-            <div id="contact_info_card" style="width: 400px;">
+            <p>All booking requests must be made in writing using the "Facilities Request Form" on the right.
+            </p>
+            <p>It <strong>must be signed</strong> so please print it, sign it and either fax it or scan
+              it and e-mail.</p>
+          </div>
+        </section>
+
+
+        <section class="majorSection2" style="border: none; margin: 0;">
+          <button class="collapsible" id="rbi">Room Booking Information</button>
+          <div class="majorSection">
+            <section>
+              <p>Most classrooms on the St. George campus are booked via the <strong>Room Reservation System - RRS</strong>.
+                Most conference rooms and lounges,and some seminar rooms are not yet available on the
+                RRS, and must be booked directly through the college, faculty or department to which
+                they belong. The major assembly space holders on campus not represented on the RRS include:
+                <a href="nonrrs.html">Hart House, the Faculty of Music and the Federated Universities & Colleges</a>.
+              </p>
+              <p>If you wish to check on room bookings and/or room availabilty, check our <a href="../bookings">online booking calendar</a>.
+              </p>
+              <p>Room reservations can be requested by fax, telephone or via:</p>
+              <p><a href="../booking_request">Online Reservation Request</a><br>Fax: (416) 978-4802
+                <br>Telephone: (416) 978-2187</p>
+              <p>Any services required from the Facilities and Services Department for the use of U of T
+                owned rooms must be placed through Academic + Campus Events. These would include the
+                opening and locking of buildings and rooms, caretaking services to clean up after an
+                event or to move furniture, an electrician to provide adequate power for large sound
+                systems, lighting, etc. Please advise the ACE room booking staff of the likelihood of
+                requiring such services at the time the room is booked.
+              </p>
+              <p><a onclick="open_collapsible('es')">Other services</a>, such as audiovisual, parking, food
+                and beverage services are normally arranged separately at the appropriate University
+                office.
+              </p>
+            </section>
+            <section>
+              <h3>Charges</h3>
+              <ol>
+                <li>Events which are not considered to be part of the University's business are charged for
+                  the use of space. Room rental rates are approximately $26 - $78/hour (depending on
+                  room size). See <a onclick="open_collapsible('rates')">room rental rates</a> page for
+                  more specific rates.
+                </li>
+                <li><a href="policies.html#cg">Campus groups</a> which have been officially recognized by
+                  the Office of the Assistant Vice President, Student Affairs will not be charged for
+                  the use of space, but will be held responsible for any costs incurred by ACE. These
+                  are usually overtime caretaking or security costs passed on to ACE by the Facilities
+                  and Services Department.
+                </li>
+                <li>Other University related meetings or events, not directly associated with the teaching
+                  and examination of degree or diploma granting courses, will be levied a modest space-use
+                  charge to offset some portion of the operating cost of the room. Rates are approximately
+                  $8 - $21/hour (according to room size). Organizers will also be held responsible for
+                  any costs incurred by ACE. These are usually overtime caretaking or security costs
+                  passed on to ACE by the Facilities and Services Department. See
+                  <a onclick="open_collapsible('rates')">room rental rates</a> page for more specific
+                  rates.
+                </li>
+              </ol>
+              <p>In addition, any extraordinary costs incurred as a result of an event, such as damage repair,
+                trades assistance or supplementary cleanup, will be passed on to the sponsoring organization
+                or department.
+              </p>
+              <a onclick="open_collapsible('gp')" class="button">Guidelines & Procedures</a>
+            </section>
+          </div>
+
+          <button class="collapsible" id="rates">Room Rental Rates</button>
+          <div class="majorSection">
+            <section>
+              <p class="important">The following rates are guideline only. Please call ACE for actual rate quotation.</p>
+              <h3>External Rates for Room Reservation</h3>
+              <p>Room rental is charged by the hour and varies according to seating capacity. External rates
+                apply to those groups who are not associated or affiliated with the University.
+              </p>
+              <table class="costs_table">
+                <thead>
+                  <tr>
+                    <th id="capacity">Room Capacity</th>
+                    <th id="rate">Rate</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td headers="capacity">Less than 25</td>
+                    <td headers="rate">$26.00</td>
+                  </tr>
+                  <tr>
+                    <td headers="capacity">Less than 50</td>
+                    <td headers="rate">$31.00</td>
+                  </tr>
+                  <tr>
+                    <td headers="capacity">Less than 100</td>
+                    <td headers="rate">$37.00</td>
+                  </tr>
+                  <tr>
+                    <td headers="capacity">Less than 200</td>
+                    <td headers="rate">$49.50</td>
+                  </tr>
+                  <tr>
+                    <td headers="capacity">Less than 300</td>
+                    <td headers="rate">$57.00</td>
+                  </tr>
+                  <tr>
+                    <td headers="capacity">Less than 500</td>
+                    <td headers="rate">$67.00</td>
+                  </tr>
+                  <tr>
+                    <td headers="capacity">500 or greater</td>
+                    <td headers="rate">$78.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <section>
+              <h3>Internal Rates for Room Reservation</h3>
+              <p>Internal rates are charged to groups which are formally recognized by the University. The
+                following rates are per hour:
+              </p>
+              <table class="costs_table">
+                <thead>
+                  <tr>
+                    <th id="capacity">Room Capacity</th>
+                    <th id="rate">Rate</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td headers="capacity">Less than 80</td>
+                    <td headers="rate">$8.00</td>
+                  </tr>
+                  <tr>
+                    <td headers="capacity">Less than 150</td>
+                    <td headers="rate">$13.00</td>
+                  </tr>
+                  <tr>
+                    <td headers="capacity">Less than 200</td>
+                    <td headers="rate">$15.00</td>
+                  </tr>
+                  <tr>
+                    <td headers="capacity">200 or greater</td>
+                    <td headers="rate">$21.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <section>
+              <h3>Audio-Visual  Equipment</h3>
+              <p><strong>Academic Bookings</strong> - A/V* is included in room cost</p>
+              <p><strong>Non-Academic Booking</strong> - A/V* is extra cost</p>
+              <p>* This includes the Teaching Station, TSJr, and any ceiling-mounted digital projector.
+                Always specify all your A/V needs at time of booking. Academic bookings likely require
+                a course code.
+              </p>
+            </section>
+            <section>
+              <h3>Caretaking Fees - Amendments as of April, 2014</h3>
+              <p>In order to better serve our customers, we&#8217;ve clarified our caretaking fee structure.
+                Effective April, 2014, the caretaking fee to a room booking on Fridays, Saturdays and
+                Sundays will be:
+              </p>
+              <ul>
+                <li>If the combined total capacity of a single event booking is 75 or higher, then a caretaking
+                  fee will apply. Capacity will be determined based on the number of attendees. If multiple
+                  rooms are requested, the capacity will be the combined capacity of the rooms requested</li>
+                <li>If the combined total capacity of a single event booking is 50 or higher and space is
+                  booked for 5 hours or longer, a caretaking fee will apply.</li>
+                <li>If a booking is made for an auditorium, a caretaking fee will apply.</li>
+              </ul>
+              <p>Notwithstanding any of the above if a booking involves food, then a caretaking fee will
+                apply.
+              </p>
+              <p>Please also note:</p>
+              <ul>
+                <li>Our office requires at least 5 business days&#8217; notice for room booking requests</li>
+                <li>The duration of any booking must be for a minimum of 2 hours</li>
+              </ul>
+              <p>Please <a href="contact.html">contact</a> us for further information.</p>
+            </section>
+          </div>
+
+          <button class="collapsible" id="es">Equipment & Services Including <strong>AV</strong></button>
+          <div class="majorSection">
+            <section>
+              <p class="title">A/V Rentals and Services</p>
+              <p>Please note that
+                <span class="important">A/V EQUIPMENT IS NOT INCLUDED IN THE ROOM RENTAL</span> and all
+                requests for A/V equipment or technician services require 6 working days advance notice.
+              </p>
+              <p>For all centrally available classrooms, please contact ACE:</p>
+              <div id="contact_info_card" style="width: 400px;">
+                <p class="contact_card_title"><img src="images/location.svg" alt="location icon" />Location</p>
+                <p style="margin-bottom: 0">ACE Tech Support<br>Academic + Campus Events<br>McMurrich Building<br>4th floor</p>
+                <p style="padding-right: 10px">
+                  <a href="http://map.utoronto.ca/building/004" target="_blank">
+                  <mark>12 Queen's Park Crescent West, Toronto, ON M5S 1S8 <span>&#187;</span></mark>
+                </a>
+                </p>
+
+                <p class="contact_card_title"><img src="images/phone.svg" alt="phone icon" />Contact</p>
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>Phone</td>
+                      <td>(416) 978 - 6544</td>
+                    </tr>
+                    <tr>
+                      <td>Fax</td>
+                      <td>(416) 978 - 4802</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a href="forms.html#erf" class="button">AV Equipment Booking Form</a>
+              <p>Contact information for other divisions at the University that provide their own support
+                is available here: <a href="tech_support.html#contact">All U of T Divisions AV Contact Information</a>
+              </p>
+              <p>Contact the technicians at ACE for information regarding equipment you are using, not for
+                booking equipment: <a href="tech_support.html">AV Equipment Technical Support</a>
+              </p>
+            </section>
+            <section>
+              <p class="title">Food Catering</p>
+              <p>You may use the caterer of your choice in most areas including the following University
+                cafeteria facilities which are currently under contract to:
+              </p>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>St. George Catering</td>
+                    <td>416 - 585 - 3169</td>
+                  </tr>
+                  <tr>
+                    <td>Innis Caf&#233;</td>
+                    <td>416 - 977 - 7434</td>
+                  </tr>
+                  <tr>
+                    <td>Sylvesters Caf&#233;</td>
+                    <td>416 - 978 - 5247</td>
+                  </tr>
+                  <tr>
+                    <td>UC Food Service (Limited Area)</td>
+                    <td>416 - 978 - 7269</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>Beverage Service</h3>
+              <p>All alcohol on campus must be ordered from the Campus Beverage Service. Please contact
+                the Food and Beverage Services at:
+                <a href="http://www.food-beverage.utoronto.ca/" target="_blank">http://www.food-beverage.utoronto.ca/</a>
+              </p>
+            </section>
+            <section>
+              <p class="title">Furniture Requests</p>
+              <p>The majority of our space is setup classroom or lecture style.</p>
+              <p>Should you require a special setup (where scheduling and/or space permits) or additional
+                furniture for registration tables, please discuss this with a reservation officer at
+                the time of booking. Additional charges may result.
+              </p>
+            </section>
+            <section>
+              <p class="title">Parking</p>
+              <p>Paid public parking is available throughout the campus at all times.
+                <br>For details contact Parking Services at:
+                <a href="http://www.parking.utoronto.ca" target="_blank">http://www.parking.utoronto.ca</a>
+              </p>
+            </section>
+            <section>
+              <p class="title">Services for Disabled Persons</p>
+              <p>For advice or information concerning building and room accessibility, contact Accessibility
+                Services:
+              </p>
+              <p>Telephone: 416 - 978 - 8060 (also T.D.D.)</p>
+              <p>Campus-wide accessibility services:
+                <a href="http://www.accessibility.utoronto.ca" target="_blank">http://www.accessibility.utoronto.ca </a>
+              </p>
+            </section>
+            <section>
+              <p class="title">Ticketing</p>
+              <p>Ticket printing and box-office services are available from UofT Tix.</p>
+              <p>Telephone: 416 - 978 - 8849 </p>
+              <a href="http://www.uofttix.ca/" target="_blank">http://www.uofttix.ca/</a>
+              <p></p>
+            </section>
+          </div>
+
+          <button class="collapsible" id="gp">Guidelines & Procedures</button>
+          <div class="majorSection">
+            <section>
+              <p>Download PDF:</p>
+              <h4><a href="forms.html#cra">Guidelines for Central Room Allocation</a></h4>
+              <h4><a href="forms.html#tus_procedures">Procedures for the Temporary Use of Space</a></h4>
+              <h4><a href="policies.html#tus_policy">Policy for the Temporary Use of Space</a></h4>
+            </section>
+          </div>
+        </section>
+      </div>
+      <div id="right">
+        <a href="nonrrs.html" class="sidebar_card">Non-ACE Room Bookings</a>
+        <div id="dynamic_content">
+          <!---------------------------- INTERNAL ---------------------------->
+          <div id="internal_right">
+            <div id="contact_info_card">
               <p class="contact_card_title"><img src="images/location.svg" alt="location icon" />Location</p>
               <p style="margin-bottom: 0">ACE - Academic + Campus Events<br>McMurrich Building<br>4th floor</p>
               <p style="padding-right: 10px">
                 <a href="http://map.utoronto.ca/building/004" target="_blank">
-                <mark>12 Queen's Park Crescent West, Toronto, ON M5S 1S8 <span>&#187;</span></mark>
-              </a>
+              <mark>12 Queen's Park Crescent West, Toronto, ON M5S 1S8 <span>&#187;</span></mark>
+                </a>
+              </p>
+
+              <p class="contact_card_title"><img src="images/phone.svg" alt="phone icon" />Contact</p>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>Phone</td>
+                    <td>Internal</td>
+                  </tr>
+                  <tr>
+                    <td>Fax</td>
+                    <td>Internal</td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td><a href="mailto:campusevents@utoronto.ca">campusevents@utoronto.ca</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!---------------------------- CAMPUS ---------------------------->
+          <div id="campus_right">
+            <a href="policies.html#cg" class="sidebar_card" style="margin-top: 10px">Policy on the Recognition of Campus Groups</a>
+            <a href="policies.html#bp" class="sidebar_card">Booking Policy on Recognized Campus Groups</a>
+            <a href="policies.html#cfcgb" class="sidebar_card">New AV Booking Policy for Recognized Campus Groups</a>
+            <a href="forms.html#cgb" class="sidebar_card">Facilities Request Form</a>
+            <div id="contact_info_card">
+              <p class="contact_card_title"><img src="images/location.svg" alt="location icon" />Location</p>
+              <p style="margin-bottom: 0">ACE - Academic + Campus Events<br>McMurrich Building<br>4th floor</p>
+              <p style="padding-right: 10px">
+                <a href="http://map.utoronto.ca/building/004" target="_blank">
+              <mark>12 Queen's Park Crescent West, Toronto, ON M5S 1S8 <span>&#187;</span></mark>
+                </a>
+              </p>
+
+              <p class="contact_card_title"><img src="images/phone.svg" alt="phone icon" />Contact</p>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>Phone</td>
+                    <td>Campus</td>
+                  </tr>
+                  <tr>
+                    <td>Fax</td>
+                    <td>Campus</td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td><a href="mailto:campusevents@utoronto.ca">campusevents@utoronto.ca</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!---------------------------- EXTERNAL ---------------------------->
+          <div id="external_right">
+            <a href="forms.html#egb" class="sidebar_card" style="margin-top: 10px">Facilities Request Form</a>
+            <a href="policies.html#rpeg" class="sidebar_card">Cancellation and Refund Policy</a>
+            <div id="contact_info_card">
+              <p class="contact_card_title"><img src="images/location.svg" alt="location icon" />Location</p>
+              <p style="margin-bottom: 0">ACE - Academic + Campus Events<br>McMurrich Building<br>4th floor</p>
+              <p style="padding-right: 10px">
+                <a href="http://map.utoronto.ca/building/004" target="_blank">
+              <mark>12 Queen's Park Crescent West, Toronto, ON M5S 1S8 <span>&#187;</span></mark>
+            </a>
               </p>
 
               <p class="contact_card_title"><img src="images/phone.svg" alt="phone icon" />Contact</p>
@@ -206,311 +571,21 @@
                 </tbody>
               </table>
             </div>
-            <p>All booking requests must be made in writing using the "Facilities Request Form" on the right.
-            </p>
-            <p>It <strong>must be signed</strong> so please print it, sign it and either fax it or scan
-              it and e-mail.</p>
-          </div>
-          <div class="links">
-            <a href="forms.html#egb" class="button">Facilities Request Form</a>
-            <a href="policies.html#rpeg" class="button">Cancellation and Refund Policy</a>
           </div>
         </div>
-      </section>
+      </div>
 
-
-      <section class="majorSection2" style="border: none; margin: 0;">
-        <button class="collapsible">Room Booking Information</button>
-        <div class="majorSection">
-          <section>
-            <p>Most classrooms on the St. George campus are booked via the <strong>Room Reservation System - RRS</strong>.
-              Most conference rooms and lounges,and some seminar rooms are not yet available on the RRS,
-              and must be booked directly through the college, faculty or department to which they belong.
-              The major assembly space holders on campus not represented on the RRS include:
-              <a href="nonrrs.html">Hart House, the Faculty of Music and the Federated Universities & Colleges</a>.
-            </p>
-            <p>If you wish to check on room bookings and/or room availabilty, check our <a href="../bookings">online booking calendar</a>.
-            </p>
-            <p>Room reservations can be requested by fax, telephone or via:</p>
-            <p><a href="../booking_request">Online Reservation Request</a><br>Fax: (416) 978-4802
-              <br>Telephone: (416) 978-2187</p>
-            <p>Any services required from the Facilities and Services Department for the use of U of T owned
-              rooms must be placed through Academic + Campus Events. These would include the opening
-              and locking of buildings and rooms, caretaking services to clean up after an event or to
-              move furniture, an electrician to provide adequate power for large sound systems, lighting,
-              etc. Please advise the ACE room booking staff of the likelihood of requiring such services
-              at the time the room is booked.
-            </p>
-            <p><a href="room_res.html#es" onclick="window.location.reload();">Other services</a>, such as
-              audiovisual, parking, food and beverage services are normally arranged separately at the
-              appropriate University office.
-            </p>
-          </section>
-          <section>
-            <h3>Charges</h3>
-            <ol>
-              <li>Events which are not considered to be part of the University's business are charged for
-                the use of space. Room rental rates are approximately $26 - $78/hour (depending on room
-                size). See <a href="room_res.html#rates" onclick="window.location.reload();">room rental rates</a>                page for more specific rates.
-              </li>
-              <li><a href="policies.html#cg">Campus groups</a> which have been officially recognized by the
-                Office of the Assistant Vice President, Student Affairs will not be charged for the use
-                of space, but will be held responsible for any costs incurred by ACE. These are usually
-                overtime caretaking or security costs passed on to ACE by the Facilities and Services
-                Department.
-              </li>
-              <li>Other University related meetings or events, not directly associated with the teaching
-                and examination of degree or diploma granting courses, will be levied a modest space-use
-                charge to offset some portion of the operating cost of the room. Rates are approximately
-                $8 - $21/hour (according to room size). Organizers will also be held responsible for
-                any costs incurred by ACE. These are usually overtime caretaking or security costs passed
-                on to ACE by the Facilities and Services Department. See <a href="room_res.html#rates"
-                  onclick="window.location.reload();">room rental rates</a> page for more specific rates.</li>
-            </ol>
-            <p>In addition, any extraordinary costs incurred as a result of an event, such as damage repair,
-              trades assistance or supplementary cleanup, will be passed on to the sponsoring organization
-              or department.
-            </p>
-            <a href="room_res.html#gp" onclick="window.location.reload();" class="button">Guidelines & Procedures</a>
-          </section>
-        </div>
-
-        <button class="collapsible" id="rates">Room Rental Rates</button>
-        <div class="majorSection">
-          <section>
-            <p class="important">The following rates are guideline only. Please call ACE for actual rate quotation.</p>
-            <h3>External Rates for Room Reservation</h3>
-            <p>Room rental is charged by the hour and varies according to seating capacity. External rates
-              apply to those groups who are not associated or affiliated with the University.
-            </p>
-            <table class="costs_table">
-              <thead>
-                <tr>
-                  <th id="capacity">Room Capacity</th>
-                  <th id="rate">Rate</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td headers="capacity">Less than 25</td>
-                  <td headers="rate">$26.00</td>
-                </tr>
-                <tr>
-                  <td headers="capacity">Less than 50</td>
-                  <td headers="rate">$31.00</td>
-                </tr>
-                <tr>
-                  <td headers="capacity">Less than 100</td>
-                  <td headers="rate">$37.00</td>
-                </tr>
-                <tr>
-                  <td headers="capacity">Less than 200</td>
-                  <td headers="rate">$49.50</td>
-                </tr>
-                <tr>
-                  <td headers="capacity">Less than 300</td>
-                  <td headers="rate">$57.00</td>
-                </tr>
-                <tr>
-                  <td headers="capacity">Less than 500</td>
-                  <td headers="rate">$67.00</td>
-                </tr>
-                <tr>
-                  <td headers="capacity">500 or greater</td>
-                  <td headers="rate">$78.00</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section>
-            <h3>Internal Rates for Room Reservation</h3>
-            <p>Internal rates are charged to groups which are formally recognized by the University. The
-              following rates are per hour:
-            </p>
-            <table class="costs_table">
-              <thead>
-                <tr>
-                  <th id="capacity">Room Capacity</th>
-                  <th id="rate">Rate</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td headers="capacity">Less than 80</td>
-                  <td headers="rate">$8.00</td>
-                </tr>
-                <tr>
-                  <td headers="capacity">Less than 150</td>
-                  <td headers="rate">$13.00</td>
-                </tr>
-                <tr>
-                  <td headers="capacity">Less than 200</td>
-                  <td headers="rate">$15.00</td>
-                </tr>
-                <tr>
-                  <td headers="capacity">200 or greater</td>
-                  <td headers="rate">$21.00</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section>
-            <h3>Audio-Visual  Equipment</h3>
-            <p><strong>Academic Bookings</strong> - A/V* is included in room cost</p>
-            <p><strong>Non-Academic Booking</strong> - A/V* is extra cost</p>
-            <p>* This includes the Teaching Station, TSJr, and any ceiling-mounted digital projector. Always
-              specify all your A/V needs at time of booking. Academic bookings likely require a course
-              code.
-            </p>
-          </section>
-          <section>
-            <h3>Caretaking Fees - Amendments as of April, 2014</h3>
-            <p>In order to better serve our customers, we&#8217;ve clarified our caretaking fee structure.
-              Effective April, 2014, the caretaking fee to a room booking on Fridays, Saturdays and Sundays
-              will be:
-            </p>
-            <ul>
-              <li>If the combined total capacity of a single event booking is 75 or higher, then a caretaking
-                fee will apply. Capacity will be determined based on the number of attendees. If multiple
-                rooms are requested, the capacity will be the combined capacity of the rooms requested</li>
-              <li>If the combined total capacity of a single event booking is 50 or higher and space is booked
-                for 5 hours or longer, a caretaking fee will apply.</li>
-              <li>If a booking is made for an auditorium, a caretaking fee will apply.</li>
-            </ul>
-            <p>Notwithstanding any of the above if a booking involves food, then a caretaking fee will apply.
-            </p>
-            <p>Please also note:</p>
-            <ul>
-              <li>Our office requires at least 5 business days&#8217; notice for room booking requests</li>
-              <li>The duration of any booking must be for a minimum of 2 hours</li>
-            </ul>
-            <p>Please <a href="contact.html">contact</a> us for further information.</p>
-          </section>
-        </div>
-
-        <button class="collapsible" id="es">Equipment & Services Including <strong>AV</strong></button>
-        <div class="majorSection">
-          <section>
-            <p class="title">A/V Rentals and Services</p>
-            <p>Please note that
-              <span class="important">A/V EQUIPMENT IS NOT INCLUDED IN THE ROOM RENTAL</span> and all
-              requests for A/V equipment or technician services require 6 working days advance notice.
-            </p>
-            <p>For all centrally available classrooms, please contact ACE:</p>
-            <div id="contact_info_card" style="width: 400px;">
-              <p class="contact_card_title"><img src="images/location.svg" alt="location icon" />Location</p>
-              <p style="margin-bottom: 0">ACE Tech Support<br>Academic + Campus Events<br>McMurrich Building<br>4th floor</p>
-              <p style="padding-right: 10px">
-                <a href="http://map.utoronto.ca/building/004" target="_blank">
-                  <mark>12 Queen's Park Crescent West, Toronto, ON M5S 1S8 <span>&#187;</span></mark>
-                </a>
-              </p>
-
-              <p class="contact_card_title"><img src="images/phone.svg" alt="phone icon" />Contact</p>
-              <table class="table">
-                <tbody>
-                  <tr>
-                    <td>Phone</td>
-                    <td>(416) 978 - 6544</td>
-                  </tr>
-                  <tr>
-                    <td>Fax</td>
-                    <td>(416) 978 - 4802</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <a href="forms.html#erf" class="button">AV Equipment Booking Form</a>
-            <p>Contact information for other divisions at the University that provide their own support
-              is available here: <a href="tech_support.html#contact">All U of T Divisions AV Contact Information</a>
-            </p>
-            <p>Contact the technicians at ACE for information regarding equipment you are using, not for
-              booking equipment: <a href="tech_support.html">AV Equipment Technical Support</a>
-            </p>
-          </section>
-          <section>
-            <p class="title">Food Catering</p>
-            <p>You may use the caterer of your choice in most areas including the following University cafeteria
-              facilities which are currently under contract to:
-            </p>
-            <table class="table">
-              <tbody>
-                <tr>
-                  <td>St. George Catering</td>
-                  <td>416 - 585 - 3169</td>
-                </tr>
-                <tr>
-                  <td>Innis Caf&#233;</td>
-                  <td>416 - 977 - 7434</td>
-                </tr>
-                <tr>
-                  <td>Sylvesters Caf&#233;</td>
-                  <td>416 - 978 - 5247</td>
-                </tr>
-                <tr>
-                  <td>UC Food Service (Limited Area)</td>
-                  <td>416 - 978 - 7269</td>
-                </tr>
-              </tbody>
-            </table>
-            <h3>Beverage Service</h3>
-            <p>All alcohol on campus must be ordered from the Campus Beverage Service. Please contact the
-              Food and Beverage Services at:
-              <a href="http://www.food-beverage.utoronto.ca/" target="_blank">http://www.food-beverage.utoronto.ca/</a>
-            </p>
-          </section>
-          <section>
-            <p class="title">Furniture Requests</p>
-            <p>The majority of our space is setup classroom or lecture style.</p>
-            <p>Should you require a special setup (where scheduling and/or space permits) or additional
-              furniture for registration tables, please discuss this with a reservation officer at the
-              time of booking. Additional charges may result.
-            </p>
-          </section>
-          <section>
-            <p class="title">Parking</p>
-            <p>Paid public parking is available throughout the campus at all times.
-              <br>For details contact Parking Services at:
-              <a href="http://www.parking.utoronto.ca" target="_blank">http://www.parking.utoronto.ca</a>
-            </p>
-          </section>
-          <section>
-            <p class="title">Services for Disabled Persons</p>
-            <p>For advice or information concerning building and room accessibility, contact Accessibility
-              Services:
-            </p>
-            <p>Telephone: 416 - 978 - 8060 (also T.D.D.)</p>
-            <p>Campus-wide accessibility services:
-              <a href="http://www.accessibility.utoronto.ca" target="_blank">http://www.accessibility.utoronto.ca </a>
-            </p>
-          </section>
-          <section>
-            <p class="title">Ticketing</p>
-            <p>Ticket printing and box-office services are available from UofT Tix.</p>
-            <p>Telephone: 416 - 978 - 8849 </p>
-            <a href="http://www.uofttix.ca/" target="_blank">http://www.uofttix.ca/</a>
-            <p></p>
-          </section>
-        </div>
-
-        <button class="collapsible" id="gp">Guidelines & Procedures</button>
-        <div class="majorSection">
-          <section>
-            <p>Download PDF:</p>
-            <h4><a href="forms.html#cra">Guidelines for Central Room Allocation</a></h4>
-            <h4><a href="forms.html#tus_procedures">Procedures for the Temporary Use of Space</a></h4>
-            <h4><a href="forms.html#tus_policy">Policy for the Temporary Use of Space</a></h4>
-          </section>
-        </div>
-      </section>
       <script>
         var current = document.getElementById('internal');
+        var current_right = document.getElementById('internal_right');
+        document.getElementById('room_booking').value = 'i';
 
         var hash = window.location.hash;
         if (hash != '') {
           var formatted_hash = hash.substr(1);
           logic(formatted_hash);
-        } else {
+        }
+        if ('#i#cg#e'.indexOf(hash) == -1 || hash == '') {
           if (document.cookie == '') {
             // sets internal university departments as the default if there is no cookie
             logic('i');
@@ -532,22 +607,46 @@
         function logic(value) {
           if (value == 'i') {
             var element = document.getElementById('internal');
+            var element_right = document.getElementById('internal_right');
           } else if (value == 'cg') {
             var element = document.getElementById('campus');
+            var element_right = document.getElementById('campus_right');
           } else if (value == 'e') {
             var element = document.getElementById('external');
+            var element_right = document.getElementById('external_right');
           } else {
             return;
           }
 
           document.getElementById('room_booking').value = value;
           current.style.opacity = '0';
+          current_right.style.opacity = '0';
+
           current.style.display = 'none';
-          element.style.display = 'flex';
+          current_right.style.display = 'none';
+
+          element.style.display = 'block';
+          element_right.style.display = 'block';
+
           setTimeout(function() {
             element.style.opacity = '1';
+            element_right.style.opacity = '1';
           }, 100);
+
           current = element;
+          current_right = element_right;
+        }
+
+        function open_collapsible(value) {
+          //Opening a section automatically on page load
+          var target_element = document.getElementById(value);
+          if (target_element != null && target_element.nodeName == 'BUTTON' && !target_element.classList
+            .contains("open")) {
+            target_element.click();
+            setTimeout(function() {
+              target_element.scrollIntoView();
+            }, 200);
+          }
         }
 
       </script>

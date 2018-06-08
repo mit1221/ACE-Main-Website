@@ -183,7 +183,7 @@ header li>a:hover:not(.active) svg g {
 }
 
 #right {
-  flex: 1;
+  flex: 0 0 350px;
 }
 
 #sidebar a {
@@ -390,6 +390,7 @@ footer {
 a {
   text-decoration: none;
   color: #264F7F;
+  cursor: pointer;
 }
 
 a:hover {
@@ -1093,30 +1094,13 @@ iframe {
   padding: 10px;
   outline: none;
   cursor: pointer;
-  transition: 0.2s;
 }
 
-#campus, #external {
+#campus, #campus_right, #external, #external_right {
   display: none;
   opacity: 0;
 }
 
-#internal {
-  flex-direction: column;
-}
-
-#internal, #campus, #external {
+#internal, #internal_right, #campus, #campus_right, #external, #external_right {
   transition: 0.4s ease-in;
-}
-
-.body {
-  flex: 3;
-  margin-right: 20px;
-}
-
-.links {
-  flex: 1;
-}
-
-.links a {
 }

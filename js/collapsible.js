@@ -10,6 +10,9 @@ window.onload = function() {
       var target_content = target_element.nextElementSibling;
       target_content.style.maxHeight = target_content.scrollHeight + "px";
       currently_open.push(target_element);
+      setTimeout(function() {
+        target_element.scrollIntoView();
+      }, 200);
     }
   }
 
