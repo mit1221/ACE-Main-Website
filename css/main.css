@@ -390,6 +390,7 @@ footer {
 a {
   text-decoration: none;
   color: #264F7F;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -473,7 +474,6 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2em;
   font-weight: bold;
   text-transform: uppercase;
   color: #002A5C;
