@@ -6,13 +6,9 @@ window.onload = function() {
   if (hash != '') {
     var target_element = document.getElementById(hash.substr(1));
     if (target_element != null && target_element.nodeName == 'BUTTON') {
-      target_element.classList.toggle("open");
-      var target_content = target_element.nextElementSibling;
-      target_content.style.maxHeight = target_content.scrollHeight + "px";
-      currently_open.push(target_element);
       setTimeout(function() {
-        target_element.scrollIntoView();
-      }, 200);
+        target_element.click();
+      }, 100);
     }
   }
 
@@ -51,6 +47,10 @@ window.onload = function() {
           }
           // opening the collapsible
           content.style.maxHeight = content.scrollHeight + "px";
+          var context = this;
+          setTimeout(function() {
+            context.scrollIntoView();
+          }, 300);
           // for resizing the parent container when an inner collapsible opens
           if (this.classList.contains('inner')) {
             currently_open[0].nextElementSibling.style.maxHeight =

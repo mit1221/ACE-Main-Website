@@ -33,137 +33,254 @@ body {
 
 /* ----------------------- HEADER -------------------- */
 
-header {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background-color: #002A5C;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+.navigation {
+  height: 70px;
+  background: #002A5C;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
   margin-bottom: 30px;
-  position: relative;
-  z-index: 21;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-header ul {
-  list-style-type: none;
+.brand {
+  position: absolute;
+  float: left;
+  line-height: 75px;
+}
+
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-container {
+  margin: 0 auto;
+}
+
+.navigation nav {
+  float: right;
+}
+
+.navigation nav ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
 }
-
-header li a {
+.navigation nav ul li {
+  float: left;
+  position: relative;
+}
+.navigation nav ul li a {
   display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: #002A5C;
   color: white;
-  padding: 30px 20px;
   border-bottom: 5px solid transparent;
   transition: 0.2s ease-out;
 }
-
-header li>a:hover:not(.active) {
+.navigation nav ul li a:hover {
+  border-bottom-color: #bccbde;
   color: #bccbde;
-  border-bottom: 5px solid #bccbde;
+}
+.navigation nav ul li ul li {
+  min-width: 255px;
 }
 
-header #image {
+@media (max-width: 1400px) {
+  .navigation {
+    font-size: 13px;
+  }
+
+  .navigation nav ul li ul li {
+    min-width: 220px;
+  }
+}
+
+.navigation nav ul li ul li a {
+  padding: 10px;
+  line-height: 20px;
+  background: white;
+  color: #002A5C;
+}
+.navigation nav ul li ul li a:hover {
+  background: #bccbde;
+  color: #002A5C;
+}
+.navigation nav ul li a:hover svg g {
+  fill: #bccbde;
+}
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navigation nav ul li:last-child .nav-dropdown {
+  right: 0px;
+}
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #002A5C;
+  height: 80px;
+  width: 70px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-mobile:hover, .nav-mobile.active {
+  background: #bccbde;
+}
+
+.nav-mobile:hover #nav-toggle span:before, .nav-mobile:hover #nav-toggle span:after {
+  width: 35px;
+}
+
+@media (max-width: 1250px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  .navigation nav {
+    width: 100%;
+    padding-top: 70px;
+  }
+  .navigation nav ul {
+    display: none;
+  }
+  .navigation nav ul li {
+    float: none;
+  }
+  .navigation nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  .navigation nav ul li a:hover {
+    background: #bccbde;
+    color: #002A5C !important;
+    border-bottom-color: transparent;
+  }
+  .navigation nav ul li a:hover svg g {
+    fill: #002A5C;
+  }
+  .navigation nav ul li ul li a {
+    padding-left: 30px;
+    background: #002A5C;
+    color: white;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+
+  .navigation nav ul li a.active {
+    pointer-events: none;
+    background: #bccbde;
+    color: #002A5C !important;
+  }
+  .navigation nav ul li a.active svg g {
+    fill: #002A5C !important;
+  }
+}
+
+.dropdown-li:hover .nav-dropdown {
+  display: block;
+}
+
+@media (min-width: 1251px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  padding: 15px 35px 16px 0px;
+  transform: scaleX(-1);
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 50px;
+  height: 2px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+  width: 30px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+  width: 20px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  width: 35px;
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  width: 35px;
+  transform: rotate(-45deg);
+}
+
+.navigation #image {
   display: flex;
   align-items: center;
   padding: 10px 25px;
-  height: 60px;
 }
 
-header li svg {
-  padding-right: 10px;
-  float: left;
-  margin-top: 2px;
-  width: 30px;
-  vertical-align: middle;
+#uoft_logo {
+  height: 45px;
+  padding-right: 15px;
 }
 
-header li svg g {
-  transition: 0.2s;
+#ace_logo {
+  height: 40px;
+  padding-left: 15px;
 }
 
-header li>a:hover:not(.active) svg g {
-  fill: #bccbde;
-}
-
-.dropdown {
-  display: block;
-  color: white;
-  padding: 30px 15px;
-  border-bottom: 5px solid transparent;
-  transition: 0.2s;
-}
-
-.dropdown:hover {
-  color: #bccbde;
-  border-bottom: 5px solid #bccbde;
-}
-
-.dropdown_content {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  margin-left: -15px;
-  margin-top: 35px;
-  background-color: white;
-  min-width: 180px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 20;
-  transition: 0.2s;
-}
-
-.dropdown_content a {
-  padding: 12px 16px;
-  display: block;
-}
-
-.dropdown_content a:not(.active) {
-  color: #002A5C;
-}
-
-.dropdown_content a:hover {
-  background-color: #bccbde;
-  color: #002A5C;
-}
-
-.dropdown:hover .dropdown_content {
-  opacity: 1;
-  visibility: visible;
-}
-
-.dropdown img {
-  transform: rotate(90deg);
-  height: 10px;
-  vertical-align: middle;
-}
-
-/* For the active item on the navigation bar and dropdown */
-
-.active {
+.navigation nav ul li a.active {
   pointer-events: none;
   border-bottom: 5px solid #bccbde;
   color: #bccbde;
 }
 
-.active:hover {
-  color: #bccbde;
-}
-
-.active svg g {
+.navigation nav ul li a.active svg g {
   fill: #bccbde;
 }
 
-.dropdown_content .active {
-  background-color: #002A5C;
-  border: none;
-  color: white;
+.navigation nav ul li a svg {
+  padding-right: 10px;
+  margin-top: -4px;
+  vertical-align: middle;
+}
+
+.navigation nav ul li a svg g {
+  transition: 0.2s;
 }
 
 /* --------------------------- BACKGROUND IMAGE ------------------ */
 .background-container {
   width: 100%;
-  height: 400px;
+  height: 500px;
   padding-bottom: 6px;
   border-bottom: 5px solid #002A5C;
   margin-bottom: 10px;
@@ -189,13 +306,21 @@ header li>a:hover:not(.active) svg g {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 400px;
+  height: 500px;
   z-index: -1;
   flex: 3;
 }
 
+.background.index {
+  background-image: url('../images/index_background.jpg');
+}
+
 .background.wedding {
   background-image: url('../images/wedding_background.jpg');
+}
+
+.background.filming {
+  background-image: url('../images/filming_background.jpg');
 }
 
 /* ----------------------------- BODY WRAPPER -------------------- */
@@ -234,6 +359,7 @@ header li>a:hover:not(.active) svg g {
   padding: 20px;
   text-align: center;
   margin-top: 15px;
+  border-radius: 3px;
   transition: 0.2s;
 }
 
@@ -345,6 +471,7 @@ header li>a:hover:not(.active) svg g {
   background-color: #CCCCCC;
   padding: 15px;
   margin: 10px 0px;
+  border-radius: 3px;
 }
 
 .contact_card_title {
@@ -452,6 +579,7 @@ a:hover {
   display: block;
   background-color: none;
   max-width: 320px;
+  border-radius: 3px;
   padding: 20px;
   margin: 10px 0;
   text-align: center;
@@ -785,6 +913,8 @@ section {
 
 button.open + .majorSection:last-child {
   border-bottom: 1px solid #002A5C;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .cost {
@@ -806,15 +936,26 @@ button.open + .majorSection:last-child {
   cursor: pointer;
   padding: 22px;
   width: 100%;
-  border: none;
   text-align: left;
+  border: none;
   outline: none;
   font-size: 18px;
   transition: 0.3s;
 }
 
+.collapsible:first-of-type {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.collapsible:last-of-type {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 .collapsible:hover:not(.open) {
     background-color: #7c7777;
+    border-radius: 5px;
     transform: scale(1.05);
     -ms-transform: scale(1.05);
     -webkit-transform: scale(1.05);
@@ -822,6 +963,7 @@ button.open + .majorSection:last-child {
 
 .open {
     background-color: #002A5C;
+    border-radius: 5px;
     transform: scale(1.05);
     -ms-transform: scale(1.05);
     -webkit-transform: scale(1.05);
@@ -1131,6 +1273,7 @@ iframe {
 
 #room_booking {
   border: 1px solid #002A5C;
+  border-radius: 3px;
   padding: 10px;
   outline: none;
   cursor: pointer;
