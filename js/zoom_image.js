@@ -27,16 +27,17 @@ $(document).ready(function() {
   content.appendChild(body);
 
   modal.appendChild(content);
-  document.body.appendChild(modal);
 
   function closeModal() {
+    modal.classList.add('animateout');
     content.classList.add('animateout');
     setTimeout(function() {
-      modal.style.display = "none";
+      modal.parentElement.removeChild(modal);
       body.removeChild(body.firstChild);
+      modal.classList.remove('animateout');
       content.classList.remove('animateout');
       document.body.style.overflow = 'auto';
-    }, 300);
+    }, 220);
   }
 
   // When the user clicks on <span> (x), close the modal
@@ -56,9 +57,9 @@ $(document).ready(function() {
     images[i].addEventListener("click", function() {
       var largeImg = document.createElement('IMG');
       largeImg.src = this.src;
-      modal.style.display = 'block';
       body.appendChild(largeImg);
       headerText.innerHTML = this.alt;
+      document.body.appendChild(modal);
       document.body.style.overflow = 'hidden';
     });
   }
@@ -68,9 +69,9 @@ $(document).ready(function() {
     cards[i].addEventListener("click", function() {
       var largeImg = document.createElement('IMG');
       largeImg.src = this.children[0].src;
-      modal.style.display = 'block';
       body.appendChild(largeImg);
       headerText.innerHTML = this.children[1].innerHTML;
+      document.body.appendChild(modal);
       document.body.style.overflow = 'hidden';
     });
   }
