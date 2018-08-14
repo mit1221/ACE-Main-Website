@@ -40,6 +40,11 @@ body {
   border-top: 5px solid transparent;
   margin-bottom: 30px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: 0.2s;
+  z-index: 1000;
 }
 
 .brand {
@@ -125,16 +130,17 @@ body {
 .nav-mobile {
   display: none;
   position: absolute;
-  top: 0;
+  top: -5px;
   right: 0;
   background: #002A5C;
   height: 80px;
   width: 70px;
   cursor: pointer;
+  opacity: 0.9;
   transition: 0.2s;
 }
 
-.nav-mobile:hover, .nav-mobile.active {
+.nav-mobile:hover {
   background: #bccbde;
 }
 
@@ -147,9 +153,13 @@ body {
     display: block;
   }
 
+  .navigation nav ul li a, .navigation nav ul li ul li a {
+    opacity: 0.95;
+  }
+
   .navigation nav {
     width: 100%;
-    padding-top: 70px;
+    padding-top: 75px;
   }
   .navigation nav ul {
     display: none;
@@ -277,10 +287,18 @@ body {
   transition: 0.2s;
 }
 
+.nav-down {
+  top: 0;
+}
+
+.nav-up {
+  top: -95px;
+}
+
 /* --------------------------- BACKGROUND IMAGE ------------------ */
 .background-container {
   width: 100%;
-  height: 500px;
+  height: 60vh;
   padding-bottom: 6px;
   border-bottom: 5px solid #002A5C;
   margin-bottom: 10px;
@@ -306,7 +324,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 500px;
+  height: 60vh;
   z-index: -1;
   flex: 3;
 }
@@ -329,6 +347,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 20px 120px 20px;
+  margin-top: 100px;
 }
 
 .wrapper>div {
@@ -374,9 +393,9 @@ body {
 .sidebar_card:hover {
   background-color: #002A5C;
   color: white;
-  transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
+  transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
 }
 
 .sidebar_text {
@@ -708,6 +727,7 @@ h4 {
 
 .wrapper2 {
   padding: 0 100px 120px 100px;
+  margin-top: 100px;
 }
 
 .wrapper2 a:not(.button) {
@@ -994,17 +1014,17 @@ button.open + .majorSection:last-child {
 .collapsible:hover:not(.open) {
     background-color: #7c7777;
     border-radius: 5px;
-    transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -webkit-transform: scale(1.05);
+    transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
 }
 
 .open {
     background-color: #002A5C;
     border-radius: 5px;
-    transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -webkit-transform: scale(1.05);
+    transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
 }
 
 .collapsible:after {
