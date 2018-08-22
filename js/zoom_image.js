@@ -61,6 +61,7 @@ $(document).ready(function() {
       headerText.innerHTML = this.alt;
       document.body.appendChild(modal);
       document.body.style.overflow = 'hidden';
+      addMessage();
     });
   }
 
@@ -73,6 +74,36 @@ $(document).ready(function() {
       headerText.innerHTML = this.children[1].innerHTML;
       document.body.appendChild(modal);
       document.body.style.overflow = 'hidden';
+      addMessage();
     });
   }
+
+  document.addEventListener('keydown', function(event) {
+    var key = event.which || event.keyCode;
+    if(key == 27) {
+      if (document.getElementsByClassName('modal').length != 0) {
+        closeModal();
+      }
+    }
+  })
 });
+
+// showing instructions on how to close image when an image is clicked
+function addMessage() {
+  var closeMessage = document.createElement('DIV');
+  closeMessage.className = 'close-viewer-message';
+  closeMessage.innerHTML = "Press 'Esc' or click 'X' to close this viewer";
+  document.body.appendChild(closeMessage);
+  setTimeout(function() {
+    closeMessage.style.opacity = 1;
+    closeMessage.style.visibility = 'visible';
+  }, 50);
+
+  setTimeout(function() {
+    closeMessage.style.opacity = 0;
+    closeMessage.style.visibility = 'hidden';
+    setTimeout(function() {
+      document.body.removeChild(closeMessage);
+    }, 800)
+  }, 2000);
+}

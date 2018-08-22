@@ -1,16 +1,5 @@
 (function($) { // Begin jQuery
   $(function() { // DOM ready
-    // If a link has a dropdown, add sub menu toggle.
-    // $('.navigation nav ul li a:not(:only-child)').click(function(e) {
-    //   $(this).siblings('.nav-dropdown').toggle();
-    //   // Close one dropdown when selecting another
-    //   $('.nav-dropdown').not($(this).siblings()).hide();
-    //   e.stopPropagation();
-    // });
-    // // Clicking away from dropdown will remove the dropdown class
-    // $('html').click(function() {
-    //   $('.nav-dropdown').hide();
-    // });
     // Toggle open and close nav styles on click
     // Hide Header on on scroll down
     var didScroll;
@@ -27,7 +16,7 @@
           hasScrolled();
           didScroll = false; // resetting variable
         }
-    }, 250);
+    }, 100);
 
     function hasScrolled() {
       var st = $(this).scrollTop();
@@ -38,11 +27,17 @@
 
       // If they scrolled down and are past the navbar, add class .nav-up.
       // This is necessary so you never see what is "behind" the navbar.
-      if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
+      if (st > lastScrollTop && st > navbarHeight){ // Scroll Down
+        // slide the navbar up
         $('.navigation').removeClass('nav-down').addClass('nav-up');
-      } else {
-        // Scroll Up
+
+        // close list if open
+        if ($('#nav-toggle').hasClass('active')) {
+          $('.navigation nav ul').css({'maxHeight': '0'});
+        }
+        $('#nav-toggle').removeClass('active');
+      } else { // Scroll Up
+        // slide the navbar down
         if(st + $(window).height() < $(document).height()) {
           $('.navigation').removeClass('nav-up').addClass('nav-down');
         }
@@ -52,12 +47,21 @@
     }
 
     $('.nav-mobile').click(function() {
-      $('.navigation nav ul').slideToggle(300);
-      // Hamburger to X toggle
       if ($('#nav-toggle').hasClass('active')) {
-        document.body.style.overflow = 'auto';
+        $('.navigation nav ul').css({'maxHeight': '0'});
       } else {
-        document.body.style.overflow = 'hidden';
+        var listHeight = document.getElementsByClassName('nav-list')[0].scrollHeight;
+        var dropdowns = document.getElementsByClassName('nav-dropdown');
+        for (var i = 0; i < dropdowns.length; i++) {
+          listHeight += dropdowns[i].scrollHeight;
+        }
+
+        /* make navbar span the entire remaining height in the viewport if it is too big
+        to fit inside the screen */
+        if ($(window).innerHeight() - navbarHeight < listHeight) {
+          listHeight = $(window).innerHeight() - navbarHeight;
+        }
+        $('.navigation nav ul').css({'maxHeight': listHeight + 'px'});
       }
 
       $('#nav-toggle').toggleClass('active');
