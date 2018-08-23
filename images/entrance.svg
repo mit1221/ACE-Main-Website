@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="399px" height="726px" viewBox="0 0 399 726" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 13</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-13" stroke="#A7A3A3">
+            <g id="Group-12">
+                <path d="M268.353312,716.853735 C269.031813,715.197417 269.5,712.639663 269.5,709.573389 L269.5,16.426611 C269.5,13.3603366 269.031813,10.8025833 268.353312,9.14626514 L13.415833,100.631195 C12.7596005,100.866686 11.6452937,101.926027 10.6594285,103.659249 C9.46053375,105.766993 8.75811018,108.342766 8.75811018,110.715558 L8.75811018,615.284442 C8.75811018,617.657234 9.46053375,620.233007 10.6594285,622.340751 C11.6452937,624.073973 12.7596005,625.133314 13.415833,625.368805 L268.353312,716.853735 Z" id="Rectangle-10" stroke-width="17"></path>
+                <path d="M232.5,332.5 L232.5,421.589842" id="Line-4" stroke-width="13" stroke-linecap="round"></path>
+            </g>
+            <rect id="Rectangle-11" stroke-width="17" x="269.5" y="86.5" width="121" height="553" rx="10"></rect>
+        </g>
+    </g>
+</svg>
