@@ -1436,6 +1436,7 @@ iframe {
 .button-group {
   display: flex;
   width: 100%;
+  margin: auto;
 }
 
 .button-group-button {
@@ -1454,27 +1455,45 @@ iframe {
   border-left: none;
 }
 
+.button-group-button {
+  flex: 1;
+  padding: 15px 10px;
+  border-left: none;
+  border-radius: 0;
+}
+
 .button-group-button:hover:not(.btn-active) {
-  background: #ccc;
-  color: white;
+  background: #bccbde;
+  color: #002A5C;
 }
 
 .button-group-button:first-child {
   border-left: 1px solid #002A5C;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 .button-group-button:last-child {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .btn-active {
   background: #002A5C;
   color: white;
-  box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.5) inset;
   pointer-events: none;
+}
+
+.btn-active svg g {
+  fill: white;
+}
+
+.button-group .small-text {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
 }
 
 .options {
@@ -1526,22 +1545,46 @@ select {
   transition: 0.2s;
 }
 
-.room_info {
+.building_container {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  box-sizing: border-box;
   margin-top: 30px;
+  background: #eeeeee;
+  padding: 20px;
+  display: flex;
 }
 
-.building_info .building-title {
+.building_info1 {
+  margin-right: 20px;
+  text-align: center;
+}
+
+.building_info1 p {
+  margin-top: 10px;
+}
+
+.building_info1 .building-title {
   font-weight: bold;
   font-size: 20px;
+  margin-top: 10px;
   margin-bottom: 0px;
 }
 
-.building_info p:nth-of-type(2) {
-  margin-top: 15px;
+#building_image {
+  max-width: 550px;
+  border-radius: 2px;
 }
 
-#building_image {
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.4);
-  border-radius: 6px;
-  max-width: 550px;
+.building_info2 {
+  flex: 1;
+  border-left: 2px solid #CCC;
+  text-align: center;
+  padding-left: 20px;
+}
+
+.building_info2 img {
+  height: 30px;
+  width: 30px;
 }
