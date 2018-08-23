@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="30px" height="30px" viewBox="0 0 579 639" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Elevator</title>
+<svg width="587px" height="621px" viewBox="0 0 587 621" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined-Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group-16">
-            <g id="Group-14" stroke="#A7A3A3" stroke-width="17">
-                <rect id="Rectangle-12" x="8.5" y="8.5" width="410" height="621" rx="10"></rect>
-                <path d="M213.5,10.4397163 L213.5,629.560284" id="Line-5" stroke-linecap="square"></path>
-            </g>
-            <g id="Group-15" transform="translate(458.000000, 207.000000)" fill="#A7A3A3">
-                <polygon id="Triangle" points="60.5 0 121 98 0 98"></polygon>
-                <polygon id="Triangle-Copy" transform="translate(60.500000, 175.000000) scale(1, -1) translate(-60.500000, -175.000000) " points="60.5 126 121 224 0 224"></polygon>
-            </g>
-        </g>
+        <path d="M196,0 L10,0 L10,0 C4.4771525,1.01453063e-15 -6.76353751e-16,4.4771525 0,10 L0,10 L0,611 C6.76353751e-16,616.522847 4.4771525,621 10,621 L196,621 L196,0 Z M231,0 L417,0 C422.522847,-1.01453063e-15 427,4.4771525 427,10 L427,611 C427,616.522847 422.522847,621 417,621 L231,621 L231,0 Z M526.5,198 L587,296 L466,296 L526.5,198 Z M526.5,422 L466,324 L587,324 L526.5,422 Z" id="Combined-Shape" fill="#002A5C"></path>
     </g>
 </svg>

@@ -583,7 +583,7 @@ a {
   transition: 0.1s;
 }
 
-a:hover {
+a:not(.button-group-button):hover {
   color: #337AB7;
 }
 
@@ -1455,13 +1455,6 @@ iframe {
   border-left: none;
 }
 
-.button-group-button {
-  flex: 1;
-  padding: 15px 10px;
-  border-left: none;
-  border-radius: 0;
-}
-
 .button-group-button:hover:not(.btn-active) {
   background: #bccbde;
   color: #002A5C;
@@ -1486,6 +1479,10 @@ iframe {
 
 .btn-active svg g {
   fill: white;
+}
+
+.btn-active svg g path {
+  stroke: white;
 }
 
 .button-group .small-text {
@@ -1584,7 +1581,7 @@ select {
   padding-left: 20px;
 }
 
-.building_info2 img {
-  height: 30px;
+.building_info2 svg {
+  height: 20px;
   width: 30px;
 }

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="40px" height="40px" viewBox="0 0 637 678" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="40px" height="40px" viewBox="0 0 669 709" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Room</title>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd">
-        <path d="M506.150973,407.546097 L506.150973,240.5 L445.488505,205.708177 L445.488505,372.754274 L337,310.532722 L337,0.102946649 L636.71696,172 L636.71696,482.429776 L506.150973,407.546097 Z M7,505.532722 L326.954358,320.806987 L626.671318,492.704041 L306.71696,677.429776 L7,505.532722 Z M0.291200905,187.725735 L320.245559,3 L320.245559,306.204041 L0.291200905,490.929776 L0.291200905,187.725735 Z M100.702248,236.523698 L100.702248,348.996723 L219.388775,280.473025 L219.388775,168 L100.702248,236.523698 Z" id="Combined-Shape"></path>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill="#FFFFFF">
+            <polygon id="Combined-Shape-path" points="538.150973 407.546097 538.150973 240.5 477.488505 205.708177 477.488505 372.754274 369 310.532722 369 0.102946649 668.71696 172 668.71696 482.429776"></polygon>
+            <polygon id="Combined-Shape-path" points="23 536.532722 342.954358 351.806987 642.671318 523.704041 322.71696 708.429776"></polygon>
+            <path d="M0.291200905,188.725735 L320.245559,4 L320.245559,307.204041 L0.291200905,491.929776 L0.291200905,188.725735 Z M100.702248,237.523698 L100.702248,349.996723 L219.388775,281.473025 L219.388775,169 L100.702248,237.523698 Z" id="Combined-Shape"></path>
+        </g>
     </g>
 </svg>
