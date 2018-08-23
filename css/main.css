@@ -1461,6 +1461,13 @@ iframe {
 
 .button-group-button:first-child {
   border-left: 1px solid #002A5C;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.button-group-button:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .btn-active {
@@ -1468,4 +1475,66 @@ iframe {
   color: white;
   box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.5) inset;
   pointer-events: none;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+}
+
+.option {
+  margin-right: 30px;
+}
+
+.option p {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.form-icons {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: #CCC;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  float: left;
+}
+
+.form-icons img {
+  height: 30px;
+}
+
+select {
+  font-family: inherit;
+  font-size: inherit;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  min-width: 200px;
+  padding: 10px;
+  outline: none;
+  border: 2px solid #CCC;
+  border-left: none;
+  height: 50px;
+  transition: 0.2s;
+}
+
+.room_info {
+  margin-top: 30px;
+}
+
+.building_info .building-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.building_info p:nth-of-type(2) {
+  margin-top: 15px;
+}
+
+#building_image {
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.4);
+  border-radius: 6px;
+  max-width: 550px;
 }
