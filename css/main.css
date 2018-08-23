@@ -583,13 +583,13 @@ a {
   transition: 0.1s;
 }
 
-a:not(.button-group-button):hover {
-  color: #337AB7;
-}
-
 .link {
   font-weight: bold;
   text-decoration: underline;
+}
+
+.link:hover {
+  color: #337AB7;
 }
 
 /* ----------------------- BUTTON CLASS FORMATTING ----------------------- */
@@ -1542,7 +1542,7 @@ select {
   transition: 0.2s;
 }
 
-.building_container {
+.building-container, .room-container {
   width: 100%;
   max-width: 1500px;
   margin: auto;
@@ -1553,35 +1553,102 @@ select {
   display: flex;
 }
 
-.building_info1 {
+.building-info1, .room-info1 {
   margin-right: 20px;
   text-align: center;
 }
 
-.building_info1 p {
+.building-info1 p {
   margin-top: 10px;
 }
 
-.building_info1 .building-title {
+.building-info1 .building-title, .room-info1 .room-title {
   font-weight: bold;
   font-size: 20px;
   margin-top: 10px;
   margin-bottom: 0px;
 }
 
-#building_image {
+#building-image {
   max-width: 550px;
   border-radius: 2px;
 }
 
-.building_info2 {
+.building-info2, .room-info2 {
   flex: 1;
   border-left: 2px solid #CCC;
-  text-align: center;
   padding-left: 20px;
 }
 
-.building_info2 svg {
+.building-info2 h3, .room-info2 h3 {
+  text-align: center;
+}
+
+.building-info2 svg, .room-info2 svg {
   height: 20px;
   width: 30px;
+}
+
+.accessibility-info {
+  margin-top: 20px;
+}
+
+.accessibility-info div {
+  padding: 10px 20px;
+  border-radius: 7px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  box-shadow: 0 2px 1px 0 rgba(0,0,0,0.2);
+}
+
+.accessibility-info p {
+  margin: 0;
+  display: inline-block;
+  width: calc(100% - 50px);
+}
+
+.accessibility-info div:after {
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.yes {
+  background: #0F9D58;
+  color: white;
+}
+
+.yes:after {
+  color: white;
+  content: 'Yes';
+}
+
+.no {
+  background: #de213b;
+  color: white;
+}
+
+.no:after {
+  color: white;
+  content: 'No';
+}
+
+.na {
+  background: white;
+}
+
+.na:after {
+  content: 'N/A';
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes move-up {
+  from {opacity: 0; transform: translateY(60px);}
+  to {opacity: 1; transform: translateY(0px);}
+}
+
+/* Standard syntax */
+@keyframes move-up {
+  from {opacity: 0; transform: translateY(60px);}
+  to {opacity: 1; transform: translateY(0px);}
 }
