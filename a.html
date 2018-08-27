@@ -19,6 +19,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/button_toggle.js"></script>
+  <script src="js/zoom_image.js"></script>
 </head>
 
 <body>
@@ -148,7 +149,7 @@
           <div class="building-info2">
             <h3>Accessibility</h3>
             <div class="button-group" style="max-width: 700px;">
-              <button class="button-group-button default">
+              <button onclick="changeTab('exterior', 0)" class="button-group-button default">
                 <svg width="40px" height="35px" viewBox="0 0 866 752" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>Building Exterior</title>
                     <g id="Page-1" stroke="none" stroke-width="1" fill="#002A5C" fill-rule="evenodd">
@@ -157,11 +158,11 @@
                 </svg>
                 <p class="small-text">Building Exterior</p>
               </button>
-              <button class="button-group-button">
+              <button onclick="changeTab('entrance', 0)" class="button-group-button">
                 <svg width="30" height="40" viewBox="0 0 412 708" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>Entrance</title>
                     <g id="Page-1" stroke="none" stroke-width="1" fill="#002A5C" fill-rule="evenodd">
-                        <g id="entrance">
+                        <g>
                             <path d="M259.595202,707.70747 L4.65772282,616.22254 C4.00149032,615.987049 2.88718352,614.927708 1.90131832,613.194486 C0.70242357,611.086742 0,608.510969 0,606.138177 L0,101.569293 C0,99.1965009 0.70242357,96.6207279 1.90131832,94.5129839 C2.88718352,92.7797619 4.00149032,91.7204209 4.65772282,91.4849299 L259.595202,0 C260.273703,1.65631816 260.74189,4.21407146 260.74189,7.28034586 L260.74189,700.427124 C260.74189,703.493398 260.273703,706.051152 259.595202,707.70747 Z M221.504623,266.5 C213.493941,266.5 207,271.820319 207,278.383264 L207,429.470471 C207,436.033416 213.493941,441.353735 221.504623,441.353735 L221.504623,441.353735 C229.515305,441.353735 236.009246,436.033416 236.009246,429.470471 L236.009246,429.470471 L236.009246,278.383264 C236.009246,271.820319 229.515305,266.5 221.504623,266.5 Z" id="Combined-Shape"></path>
                             <rect id="Rectangle-11" x="291" y="77" width="121" height="553" rx="10"></rect>
                         </g>
@@ -169,7 +170,7 @@
                 </svg>
                 <p class="small-text">Building Entrance</p>
               </button>
-              <button class="button-group-button">
+              <button onclick="changeTab('elevators', 0)" class="button-group-button">
                 <svg width="30px" height="40px" viewBox="0 0 570 621" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>Elevator</title>
                     <g id="Page-1" stroke="none" stroke-width="1" fill="#002A5C" fill-rule="evenodd">
@@ -178,7 +179,7 @@
                 </svg>
                 <p class="small-text">Elevators</p>
               </button>
-              <button class="button-group-button">
+              <button onclick="changeTab('washrooms', 0)" class="button-group-button">
                 <svg width="50px" height="30px" viewBox="0 0 571 575" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>Washroom</title>
                     <g id="Page-1" stroke="none" stroke-width="1" fill="#002A5C" fill-rule="evenodd">
@@ -198,18 +199,113 @@
                 <p class="small-text">Washrooms</p>
               </button>
             </div>
-            <section class="accessibility-info">
-              <div class="info yes">
-                <p>Curb cuts on the path to the building entrance</p>
+            <section class="data">
+              <!-- exterior tab contents -->
+              <div id="exterior">
+                <div class="info yes">
+                  <p>Curb cuts on the path to the building entrance</p>
+                  <p>Yes</p>
+                </div>
+                <div class="info yes">
+                  <p>Wheelchair accessible ramp to accessible entrance</p>
+                  <p>Yes</p>
+                </div>
+                <div class="info yes">
+                  <p>Inaccessible entrances have signage to accessible entrances</p>
+                  <p>Yes</p>
+                </div>
+                <div class="info no">
+                  <p>Handrails are on both sides of the stairwell/ramp that are continuously graspable</p>
+                  <p>No</p>
+                </div>
               </div>
-              <div class="info yes">
-                <p>Wheelchair accessible ramp to accessible entrance</p>
+
+              <!-- entrance tab contents -->
+              <div id="entrance">
+                <div class="info no">
+                  <p>Automatic sliding doors</p>
+                  <p>No</p>
+                </div>
+                <div class="info yes">
+                  <p>Power doors with large push plates</p>
+                  <p>Yes</p>
+                </div>
+                <div class="info moderate">
+                  <p>Door heaviness</p>
+                  <p>Moderate</p>
+                </div>
+                <div class="info yes">
+                  <p>Double doors: enough room for wheelchair to open second door</p>
+                  <p>Yes</p>
+                </div>
               </div>
-              <div class="info yes">
-                <p>Inaccessible entrances have signage to accessible entrances</p>
+
+              <!-- elevators tab contents -->
+              <div id="elevators">
+                <div class="info no">
+                  <p>Elevator location clearly identified at main entrance</p>
+                  <p>No</p>
+                </div>
+                <div class="info yes">
+                  <p>Buttons and emergency controls accessible when seated</p>
+                  <p>Yes</p>
+                </div>
+                <div class="info yes">
+                  <p>Buttons & emergency controls in large print numbers</p>
+                  <p>Yes</p>
+                </div>
+                <div class="info yes">
+                  <p>Buttons & emergency controls light up when pressed</p>
+                  <p>Yes</p>
+                </div>
+                <div class="info no">
+                  <p>Audible floor announcements</p>
+                  <p>No</p>
+                </div>
+                <div class="info yes">
+                  <p>All floors served by elevator</p>
+                  <p>Yes</p>
+                </div>
+                <div class="info na">
+                  <p>Indicate floors not served by elevator</p>
+                  <p>N/A</p>
+                </div>
+                <div class="info no">
+                  <p>Additional door entrance once you get off eleveator</p>
+                  <p>No</p>
+                </div>
+                <div class="info no">
+                  <p>Elevator must be unlocked to use</p>
+                  <p>No</p>
+                </div>
+                <div class="info na">
+                  <p>Contact to unlock elevator</p>
+                  <p>N/A</p>
+                </div>
+                <div class="info na">
+                  <p>Indicate times of day during which elevator is not available</p>
+                  <p>N/A</p>
+                </div>
               </div>
-              <div class="info no">
-                <p>Handrails are on both sides of the stairwell/ramp that are continuously graspable</p>
+
+              <!-- washrooms tab contents -->
+              <div id="washrooms">
+                <div class="info">
+                  <p>Location of washroom</p>
+                  <p>Each floor (Accessible)</p>
+                </div>
+                <div class="info na">
+                  <p>Single door entrance</p>
+                  <p>N/A</p>
+                </div>
+                <div class="info na">
+                  <p>Door is wide & easy to open</p>
+                  <p>N/A</p>
+                </div>
+                <div class="info">
+                  <p>Indicate if/where there is accessible washroom</p>
+                  <p>Single user washrooms on 1st, 4th,5th,,7th 8th floors</p>
+                </div>
               </div>
             </section>
           </div>
@@ -221,7 +317,78 @@
             <p class="room-title">BA1130</p>
           </div>
           <div class="room-info2">
+            <div class="button-group" style="max-width: 500px;">
+              <button onclick="changeTab('room-information', 1)" class="button-group-button default">
+                <i class="material-icons">info</i>
+                <p class="small-text">Room Information</p>
+              </button>
+              <button onclick="changeTab('accessibility', 1)" class="button-group-button">
+                <i class="material-icons">accessible</i>
+                <p class="small-text">Room Accessibility</p>
+              </button>
+            </div>
+            <section class="data">
+              <!-- stats tab contents -->
+              <div id="room-information">
+                <div class="info">
+                  <p>Capacity</p>
+                  <p>160</p>
+                </div>
+                <div class="info">
+                  <p>Seating Type</p>
+                  <p>Stacking Chairs</p>
+                </div>
+                <div class="info">
+                  <p>Writing Surface</p>
+                  <p>Continuous Tables</p>
+                </div>
+                <div class="info yes">
+                  <p>Teaching station</p>
+                  <p>Yes</p>
+                </div>
+                <div class="info no">
+                  <p>Teaching station Junior</p>
+                  <p>No</p>
+                </div>
+                <div class="info">
+                  <p>External Rental Rate</p>
+                  <p>$50.00 / hour</p>
+                </div>
+              </div>
 
+              <!-- room accessibility tab contents -->
+              <div id="accessibility">
+                <div class="info no">
+                  <p>At least 1 automatic entrance</p>
+                  <p>No</p>
+                </div>
+                <div class="info no">
+                  <p>Alternate accessible entrance</p>
+                  <p>No</p>
+                </div>
+                <div class="info yes">
+                  <p>Accessible seating located near accessible entrance</p>
+                  <p>Yes</p>
+                </div>
+                <div class="info no">
+                  <p>Aisles large enough for wheelchair/scooter</p>
+                  <p>No</p>
+                </div>
+                <div class="info no">
+                  <p>Reserved seating/space for wheelchair</p>
+                  <p>No</p>
+                </div>
+                <div class="info no">
+                  <p>Clear space for wheelchair to navigate</p>
+                  <p>No</p>
+                </div>
+                <div class="info yes">
+                  <p>Lights can be dimmed</p>
+                  <p>Yes</p>
+                </div>
+              </div>
+              <a style="margin: auto; margin-top: 20px;" href="documents/Wedding_Form.pdf" class="button">Floor plan PDF</a>
+            </section>
           </div>
         </div>
       </div>
@@ -241,6 +408,28 @@
       </nav>
     </footer>
   </div>
+
+  <script>
+    var buttonGroups = document.getElementsByClassName('button-group');
+    var current = [];
+    for (var i = 0; i < buttonGroups.length; i++) {
+      current.push(null);
+    }
+
+    for (var i = 0; i < buttonGroups.length; i++) {
+      // make the default tab active
+      document.getElementsByClassName('default')[0].click();
+      document.getElementsByClassName('default')[1].click();
+
+      function changeTab(tab, tabGroup) {
+        if (current[tabGroup]) {
+          document.getElementById(current[tabGroup]).style.display = 'none';
+        }
+        document.getElementById(tab).style.display = 'block';
+        current[tabGroup] = tab;
+      }
+    }
+  </script>
 </body>
 
 </html>

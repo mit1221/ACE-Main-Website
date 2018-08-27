@@ -836,7 +836,10 @@ section {
   border-radius: 5px;
   transition: 0.4s;
   cursor: pointer;
-  cursor: zoom-in;
+}
+
+.zoom-image, .zoom-card {
+  cursor: zoom-in !important;
 }
 
 #images_container>div:hover {
@@ -1589,57 +1592,77 @@ select {
   width: 30px;
 }
 
-.accessibility-info {
+.data {
   margin-top: 20px;
+  margin-bottom: 5px;
 }
 
-.accessibility-info div {
+.data > div {
+  display: none;
+}
+
+.data > div > div {
   padding: 10px 20px;
   border-radius: 7px;
-  margin-top: 10px;
+  margin-top: 7px;
   margin-bottom: 0;
+  background: white;
   box-shadow: 0 2px 1px 0 rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-animation: fade-in 0.3s ease-out; /* Safari 4.0 - 8.0 */
+  animation: fade-in 0.3s ease-out;
 }
 
-.accessibility-info p {
+@-webkit-keyframes fade-in {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fade-in {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+.data p {
   margin: 0;
   display: inline-block;
-  width: calc(100% - 50px);
 }
 
-.accessibility-info div:after {
+.data p:first-child {
+  margin-right: 15px;
+}
+
+.data > div > div p:nth-child(2) {
   font-weight: bold;
-  float: right;
-  margin-left: 5px;
 }
 
-.yes {
-  background: #0F9D58;
+.yes, .light {
+  background: #0ca66d !important;
   color: white;
 }
 
-.yes:after {
+/* .yes:after {
   color: white;
   content: 'Yes';
-}
+} */
 
-.no {
-  background: #de213b;
+.no, .heavy {
+  background: #e0364d !important;
   color: white;
 }
 
-.no:after {
+.moderate {
+  background: #E3C83D !important;
+  color: white;
+}
+
+/* .no:after {
   color: white;
   content: 'No';
-}
+} */
 
-.na {
-  background: white;
-}
-
-.na:after {
-  content: 'N/A';
-}
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes move-up {
