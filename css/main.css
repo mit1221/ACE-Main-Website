@@ -757,18 +757,6 @@ h4 {
   height: 60px;
 }
 
-.lanyard-lending-image {
-  background-image: url('../images/lanyard_lending_image.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  flex-basis: 300px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  margin-left: 20px;
-  box-shadow: 70px 0 80px 0 #e1f2c8 inset;
-}
-
 .green-initiative button {
   background: #11512B;
   color: white;
