@@ -13,14 +13,25 @@
 
   <title>Room Info Design</title>
   <link rel="shortcut icon" href="images/ico.ico">
+  <link rel="stylesheet" href="css/calendar.css" type="text/css">
   <link rel="stylesheet" href="css/main.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="js/collapsible.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/navbar.js"></script>
-  <script src="js/button_toggle.js"></script>
-  <script src="js/zoom_image.js"></script>
 </head>
+
+<style>
+  .collapsible {
+    padding: 15px 20px;
+  }
+
+  .majorSection {
+    background: #eeeeee;
+  }
+
+</style>
 
 <body>
   <!-- Header and Titles -->
@@ -58,29 +69,6 @@
               </a>
             </li>
             <li>
-              <a href="weddinghome.html">
-                <svg width="18px" height="18px" viewBox="0 0 72 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <title>Wedding icon</title>
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g id="Group" fill-rule="nonzero" fill="#ffffff">
-                            <path d="M51.173,73.054 C46.171,75.497 42.034,77.26 42.034,77.26 C42.034,77.26 37.904,79.037 32.683,80.971 C32.717,81.055 32.741,81.14 32.777,81.224 C34.966,86.336 40.886,88.706 45.998,86.517 C51.11,84.327 53.48,78.408 51.291,73.296 C51.256,73.213 51.211,73.136 51.173,73.054 Z" id="Shape"></path>
-                            <path d="M69.988,48.505 C37.452,35.479 39.359,16.119 31.858,9.769 C27.265,5.88 21.283,6.291 17.228,7.238 L15.65,3.552 C14.619,1.145 11.806,0.019 9.399,1.05 C6.992,2.081 5.865,4.894 6.896,7.301 L8.474,10.987 C4.99,13.268 0.565,17.314 0.21,23.322 C-0.37,33.132 14.958,45.113 1.932,77.649 C-2.432,88.548 39.195,70.632 39.195,70.632 C39.195,70.632 80.888,52.869 69.988,48.505 Z" id="Shape"></path>
-                        </g>
-                    </g>
-                </svg>Weddings
-              </a>
-            </li>
-            <li>
-              <a href="film.html">
-                <svg width="18px" height="18px" viewBox="0 0 518 314" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <title>Filming icon</title>
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="#ffffff" fill-rule="evenodd">
-                        <path d="M402.888889,117.75 L402.888889,26.1666667 C402.888889,11.775 389.938889,0 374.111111,0 L28.7777778,0 C12.95,0 0,11.775 0,26.1666667 L0,287.833333 C0,302.225 12.95,314 28.7777778,314 L374.111111,314 C389.938889,314 402.888889,302.225 402.888889,287.833333 L402.888889,196.25 L518,300.916667 L518,13.0833333 L402.888889,117.75 L402.888889,117.75 Z" id="Icon"></path>
-                    </g>
-                </svg>Filming
-              </a>
-            </li>
-            <li>
               <a href="tech_support.html">
                 <svg width="18px" height="18px" viewBox="0 0 517 531" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>Tech Support icon</title>
@@ -102,6 +90,11 @@
                 </svg>Con Hall
               </a>
             </li>
+            <li>
+              <a href=",,/rrslite/f?p=107">
+                Report Classroom Problem
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -109,227 +102,61 @@
 
     <div class="wrapper more_line_height">
       <div class="main" style="width: 100%">
-        <h1>Room Info<br><a target="_blank" href="http://www.utoronto.ca">
-          <span class="sub_title">University of Toronto, Downtown Campus <span>&#10140;</span></span></a>
-        </h1>
-        <div class="button-group" style="width: 900px; margin: auto">
-          <a class="button-group-button btn-active">Room Description & Calendar of Availibility</a>
-          <a class="button-group-button">Reserve Room</a>
-        </div>
-        <div class="options">
-          <div class="option">
-            <p>Building</p>
-            <div class="form-icons">
-              <img src="images/building_white.svg" />
+        <h1>Room Info</h1>
+        <div class="tools" style="margin-top: 20px; box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 4px 0px ">
+          <div class="options">
+            <div class="option">
+              <div class="form-icons">
+                <img src="images/building_blue.svg" />
+              </div>
+              <select>
+                <option disabled selected>Select building</option>
+                <option value="ba">BA Bahen Centre Information Tech</option>
+                <option value="wb">WB Wallberg Building</option>
+              </select>
             </div>
-            <select>
-              <option disabled selected>Select building</option>
-              <option value="ba">BA Bahen Centre Information Tech</option>
-              <option value="wb">WB Wallberg Building</option>
-            </select>
-          </div>
-          <div class="option">
-            <p>Room</p>
-            <div class="form-icons">
-              <img src="images/room.svg" />
+            <div class="option">
+              <div class="form-icons">
+                <img src="images/room.svg" />
+              </div>
+              <select>
+                <option disabled selected>Select room</option>
+                <option value="110">110</option>
+                <option value="115">115</option>
+              </select>
             </div>
-            <select>
-              <option disabled selected>Select room</option>
-              <option value="110">110</option>
-              <option value="115">115</option>
-            </select>
           </div>
-        </div>
-        <div class="building-container">
-          <div class="building-info1">
-            <img id="building-image" src="images/bahen_image1.jpg" alt="Building image">
-            <p class="building-title">Bahen Centre Information Tech</p>
-            <p>40 St. George Street<br>Toronto, Ontario</p>
-          </div>
-          <div class="building-info2">
-            <h3>Accessibility</h3>
-            <div class="button-group" style="max-width: 700px;">
-              <button onclick="changeTab('exterior', 0)" class="button-group-button default">
-                <svg width="40px" height="35px" viewBox="0 0 866 752" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <title>Building Exterior</title>
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="#002A5C" fill-rule="evenodd">
-                        <path d="M846.5,112.1 L572.9,2.2 C569.6,0.9 566.2,0.2 562.8,0.1 C562.8,0.1 562.8,0.1 562.8,0.1 C562.4,0.1 562,0.1 561.6,0.1 C561.2,0.1 560.8,0.1 560.4,0.1 C560.4,0.1 560.4,0.1 560.4,0.1 C557,0.2 553.6,0.9 550.3,2.2 L276.6,112.1 C265.2,116.7 257.8,127.7 257.8,139.9 L257.8,288.2 L199.4,264.7 C196.7,263.6 193.9,263 191.1,262.9 C191,262.9 191,262.9 190.9,262.9 C190.6,262.9 190.3,262.9 189.9,262.9 C189.6,262.9 189.3,262.9 189,262.9 C188.9,262.9 188.8,262.9 188.8,262.9 C186,263 183.2,263.6 180.5,264.7 L16.4,330.6 C6.9,334.4 0.7,343.6 0.7,353.9 L0.7,726.9 C0.7,740.7 11.9,752 25.8,752 C39.7,752 50.9,740.8 50.9,726.9 L50.9,370.8 L164.9,325.1 L164.9,726.9 C164.9,740.7 176.1,752 190,752 C190,752 190.1,752 190.1,752 C190.1,752 190.2,752 190.2,752 L288,752 C288,752 288,752 288,752 C288,752 288,752 288,752 L354.3,752 C368.1,752 379.4,740.8 379.4,726.9 L379.4,353.9 C379.4,343.7 373.2,334.5 363.7,330.6 L318,312.3 L318,160.2 L531.7,74.4 L531.7,721.9 C531.7,738.5 545.1,751.9 561.7,751.9 C561.7,751.9 561.8,751.9 561.8,751.9 C561.8,751.9 561.9,751.9 561.9,751.9 L835.6,751.9 C852.2,751.9 865.6,738.5 865.6,721.9 L865.6,139.9 C865.4,127.7 857.9,116.6 846.5,112.1 Z" id="Shape" fill-rule="nonzero"></path>
-                    </g>
-                </svg>
-                <p class="small-text">Building Exterior</p>
-              </button>
-              <button onclick="changeTab('entrance', 0)" class="button-group-button">
-                <svg width="30" height="40" viewBox="0 0 412 708" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <title>Entrance</title>
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="#002A5C" fill-rule="evenodd">
-                        <g>
-                            <path d="M259.595202,707.70747 L4.65772282,616.22254 C4.00149032,615.987049 2.88718352,614.927708 1.90131832,613.194486 C0.70242357,611.086742 0,608.510969 0,606.138177 L0,101.569293 C0,99.1965009 0.70242357,96.6207279 1.90131832,94.5129839 C2.88718352,92.7797619 4.00149032,91.7204209 4.65772282,91.4849299 L259.595202,0 C260.273703,1.65631816 260.74189,4.21407146 260.74189,7.28034586 L260.74189,700.427124 C260.74189,703.493398 260.273703,706.051152 259.595202,707.70747 Z M221.504623,266.5 C213.493941,266.5 207,271.820319 207,278.383264 L207,429.470471 C207,436.033416 213.493941,441.353735 221.504623,441.353735 L221.504623,441.353735 C229.515305,441.353735 236.009246,436.033416 236.009246,429.470471 L236.009246,429.470471 L236.009246,278.383264 C236.009246,271.820319 229.515305,266.5 221.504623,266.5 Z" id="Combined-Shape"></path>
-                            <rect id="Rectangle-11" x="291" y="77" width="121" height="553" rx="10"></rect>
-                        </g>
-                    </g>
-                </svg>
-                <p class="small-text">Building Entrance</p>
-              </button>
-              <button onclick="changeTab('elevators', 0)" class="button-group-button">
-                <svg width="30px" height="40px" viewBox="0 0 570 621" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <title>Elevator</title>
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="#002A5C" fill-rule="evenodd">
-                      <path d="M196,0 L10,0 L10,0 C4.4771525,1.01453063e-15 -6.76353751e-16,4.4771525 0,10 L0,10 L0,611 C6.76353751e-16,616.522847 4.4771525,621 10,621 L196,621 L196,0 Z M231,0 L417,0 C422.522847,-1.01453063e-15 427,4.4771525 427,10 L427,611 C427,616.522847 422.522847,621 417,621 L231,621 L231,0 Z M526.5,198 L587,296 L466,296 L526.5,198 Z M526.5,422 L466,324 L587,324 L526.5,422 Z" id="Combined-Shape"></path>
-                    </g>
-                </svg>
-                <p class="small-text">Elevators</p>
-              </button>
-              <button onclick="changeTab('washrooms', 0)" class="button-group-button">
-                <svg width="50px" height="30px" viewBox="0 0 571 575" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <title>Washroom</title>
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="#002A5C" fill-rule="evenodd">
-                        <g id="Group-18" transform="translate(0.000000, 9.000000)" stroke-width="17">
-                            <g id="Group-17" transform="translate(0.000000, 69.000000)">
-                                <ellipse id="Oval-5" cx="106.382671" cy="71.8221416" rx="71.9422383" ry="71.8221416"></ellipse>
-                                <path d="M48.2898964,186.527223 C48.2191404,186.584117 48.1340924,186.661148 48.0405465,186.758646 C47.4779507,187.345009 47.023511,188.245111 46.8622992,189.184231 L8.6049109,412.048109 C9.09161678,412.300435 9.89651267,412.5 10.9504023,412.5 L201.049598,412.5 C202.103487,412.5 202.908383,412.300435 203.395089,412.048109 L165.137701,189.184231 C164.976489,188.245111 164.522049,187.345009 163.959454,186.758646 C163.865908,186.661148 163.78086,186.584117 163.710104,186.527223 L48.2898964,186.527223 Z" id="Rectangle-13"></path>
-                            </g>
-                            <g id="Group-17-Copy" transform="translate(359.000000, 69.000000)">
-                                <ellipse id="Oval-5" cx="106.382671" cy="71.8221416" rx="71.9422383" ry="71.8221416"></ellipse>
-                                <path d="M48.2898964,186.527223 C48.2191404,186.584117 48.1340924,186.661148 48.0405465,186.758646 C47.4779507,187.345009 47.023511,188.245111 46.8622992,189.184231 L8.6049109,412.048109 C9.09161678,412.300435 9.89651267,412.5 10.9504023,412.5 L201.049598,412.5 C202.103487,412.5 202.908383,412.300435 203.395089,412.048109 L165.137701,189.184231 C164.976489,188.245111 164.522049,187.345009 163.959454,186.758646 C163.865908,186.661148 163.78086,186.584117 163.710104,186.527223 L48.2898964,186.527223 Z" id="Rectangle-13" transform="translate(106.000000, 299.513612) scale(1, -1) translate(-106.000000, -299.513612) "></path>
-                            </g>
-                            <path d="M285.5,0.38225058 L285.5,557.5" id="Line-6" stroke="#002A5C" stroke-linecap="round"></path>
-                        </g>
-                    </g>
-                </svg>
-                <p class="small-text">Washrooms</p>
-              </button>
-            </div>
-            <section class="data">
-              <!-- exterior tab contents -->
-              <div id="exterior">
-                <div class="info yes">
-                  <p>Curb cuts on the path to the building entrance</p>
-                  <p>Yes</p>
-                </div>
-                <div class="info yes">
-                  <p>Wheelchair accessible ramp to accessible entrance</p>
-                  <p>Yes</p>
-                </div>
-                <div class="info yes">
-                  <p>Inaccessible entrances have signage to accessible entrances</p>
-                  <p>Yes</p>
-                </div>
-                <div class="info no">
-                  <p>Handrails are on both sides of the stairwell/ramp that are continuously graspable</p>
-                  <p>No</p>
-                </div>
-              </div>
 
-              <!-- entrance tab contents -->
-              <div id="entrance">
-                <div class="info no">
-                  <p>Automatic sliding doors</p>
-                  <p>No</p>
-                </div>
-                <div class="info yes">
-                  <p>Power doors with large push plates</p>
-                  <p>Yes</p>
-                </div>
-                <div class="info moderate">
-                  <p>Door heaviness</p>
-                  <p>Moderate</p>
-                </div>
-                <div class="info yes">
-                  <p>Double doors: enough room for wheelchair to open second door</p>
-                  <p>Yes</p>
-                </div>
-              </div>
-
-              <!-- elevators tab contents -->
-              <div id="elevators">
-                <div class="info no">
-                  <p>Elevator location clearly identified at main entrance</p>
-                  <p>No</p>
-                </div>
-                <div class="info yes">
-                  <p>Buttons and emergency controls accessible when seated</p>
-                  <p>Yes</p>
-                </div>
-                <div class="info yes">
-                  <p>Buttons & emergency controls in large print numbers</p>
-                  <p>Yes</p>
-                </div>
-                <div class="info yes">
-                  <p>Buttons & emergency controls light up when pressed</p>
-                  <p>Yes</p>
-                </div>
-                <div class="info no">
-                  <p>Audible floor announcements</p>
-                  <p>No</p>
-                </div>
-                <div class="info yes">
-                  <p>All floors served by elevator</p>
-                  <p>Yes</p>
-                </div>
-                <div class="info na">
-                  <p>Indicate floors not served by elevator</p>
-                  <p>N/A</p>
-                </div>
-                <div class="info no">
-                  <p>Additional door entrance once you get off eleveator</p>
-                  <p>No</p>
-                </div>
-                <div class="info no">
-                  <p>Elevator must be unlocked to use</p>
-                  <p>No</p>
-                </div>
-                <div class="info na">
-                  <p>Contact to unlock elevator</p>
-                  <p>N/A</p>
-                </div>
-                <div class="info na">
-                  <p>Indicate times of day during which elevator is not available</p>
-                  <p>N/A</p>
-                </div>
-              </div>
-
-              <!-- washrooms tab contents -->
-              <div id="washrooms">
-                <div class="info">
-                  <p>Location of washroom</p>
-                  <p>Each floor (Accessible)</p>
-                </div>
-                <div class="info na">
-                  <p>Single door entrance</p>
-                  <p>N/A</p>
-                </div>
-                <div class="info na">
-                  <p>Door is wide & easy to open</p>
-                  <p>N/A</p>
-                </div>
-                <div class="info">
-                  <p>Indicate if/where there is accessible washroom</p>
-                  <p>Single user washrooms on 1st, 4th,5th,,7th 8th floors</p>
-                </div>
-              </div>
-            </section>
+          <div class="toggler">
+            <p id="room-label">Room Description</p>
+            <label class="switch">
+              <input type="checkbox" onchange="changePage()" id="toggle-switch">
+              <span class="slider round"></span>
+            </label>
+            <p id="calendar-label">Calendar</p>
           </div>
         </div>
 
         <div class="room-container">
-          <div class="room-info1">
-            <img id="building-image" src="images/bahen_image2.jpg" alt="Room image">
-            <p class="room-title">BA1130</p>
-          </div>
-          <div class="room-info2">
-            <div class="button-group" style="max-width: 500px;">
-              <button onclick="changeTab('room-information', 1)" class="button-group-button default">
-                <i class="material-icons">info</i>
-                <p class="small-text">Room Information</p>
-              </button>
-              <button onclick="changeTab('accessibility', 1)" class="button-group-button">
-                <i class="material-icons">accessible</i>
-                <p class="small-text">Room Accessibility</p>
-              </button>
+          <div style="display: flex;">
+            <div>
+              <div style="display: flex">
+                <img id="building-image" src="images/bahen_image1.jpg" alt="Building image">
+                <div>
+                  <p class="building-title" style="text-align: left">Bahen Centre Information Tech</p>
+                  <p style="margin-top: 0">40 St. George Street, Toronto, Ontario</p>
+                </div>
+              </div>
+              <p class="room-title" style="margin-bottom: 10px">BA1130</p>
+              <img id="room-image" src="images/bahen_image2.jpg" alt="Room image">
+              <p>Classroom and building floor plans remain copyright property of the university and are
+                authorized for use on university business only (not for distribution).
+              </p>
+              <p>For Accessibility data related queries please email: <a class="link" href="mailto:ad.huronstreet@utoronto.ca">ad.huronstreet@utoronto.ca</a>.</p>
             </div>
-            <section class="data">
-              <!-- stats tab contents -->
-              <div id="room-information">
+
+            <div class="side-info">
+              <div class="data">
                 <div class="info">
                   <p>Capacity</p>
                   <p>160</p>
@@ -342,11 +169,11 @@
                   <p>Writing Surface</p>
                   <p>Continuous Tables</p>
                 </div>
-                <div class="info yes">
+                <div class="info">
                   <p>Teaching station</p>
                   <p>Yes</p>
                 </div>
-                <div class="info no">
+                <div class="info">
                   <p>Teaching station Junior</p>
                   <p>No</p>
                 </div>
@@ -356,41 +183,573 @@
                 </div>
               </div>
 
-              <!-- room accessibility tab contents -->
-              <div id="accessibility">
-                <div class="info no">
-                  <p>At least 1 automatic entrance</p>
-                  <p>No</p>
+              <div>
+                <button class="collapsible">Accessibility: Building Exterior</button>
+                <div class="majorSection">
+                  <div class="info yes">
+                    <p>Curb cuts on the path to the building entrance</p>
+                    <p>Yes</p>
+                  </div>
+                  <div class="info yes">
+                    <p>Wheelchair accessible ramp to accessible entrance</p>
+                    <p>Yes</p>
+                  </div>
+                  <div class="info yes">
+                    <p>Inaccessible entrances have signage to accessible entrances</p>
+                    <p>Yes</p>
+                  </div>
+                  <div class="info no">
+                    <p>Handrails are on both sides of the stairwell/ramp that are continuously graspable</p>
+                    <p>No</p>
+                  </div>
                 </div>
-                <div class="info no">
-                  <p>Alternate accessible entrance</p>
-                  <p>No</p>
+
+                <button class="collapsible">Accessibility: Building Entrance</button>
+                <div class="majorSection">
+                  <div class="info no">
+                    <p>Automatic sliding doors</p>
+                    <p>No</p>
+                  </div>
+                  <div class="info yes">
+                    <p>Power doors with large push plates</p>
+                    <p>Yes</p>
+                  </div>
+                  <div class="info moderate">
+                    <p>Door heaviness</p>
+                    <p>Moderate</p>
+                  </div>
+                  <div class="info yes">
+                    <p>Double doors: enough room for wheelchair to open second door</p>
+                    <p>Yes</p>
+                  </div>
                 </div>
-                <div class="info yes">
-                  <p>Accessible seating located near accessible entrance</p>
-                  <p>Yes</p>
+
+                <button class="collapsible">Accessibility: Elevators</button>
+                <div class="majorSection">
+                  <div class="info no">
+                    <p>Elevator location clearly identified at main entrance</p>
+                    <p>No</p>
+                  </div>
+                  <div class="info yes">
+                    <p>Buttons and emergency controls accessible when seated</p>
+                    <p>Yes</p>
+                  </div>
+                  <div class="info yes">
+                    <p>Buttons & emergency controls in large print numbers</p>
+                    <p>Yes</p>
+                  </div>
+                  <div class="info yes">
+                    <p>Buttons & emergency controls light up when pressed</p>
+                    <p>Yes</p>
+                  </div>
+                  <div class="info no">
+                    <p>Audible floor announcements</p>
+                    <p>No</p>
+                  </div>
+                  <div class="info yes">
+                    <p>All floors served by elevator</p>
+                    <p>Yes</p>
+                  </div>
+                  <div class="info na">
+                    <p>Indicate floors not served by elevator</p>
+                    <p>N/A</p>
+                  </div>
+                  <div class="info no">
+                    <p>Additional door entrance once you get off eleveator</p>
+                    <p>No</p>
+                  </div>
+                  <div class="info no">
+                    <p>Elevator must be unlocked to use</p>
+                    <p>No</p>
+                  </div>
+                  <div class="info na">
+                    <p>Contact to unlock elevator</p>
+                    <p>N/A</p>
+                  </div>
+                  <div class="info na">
+                    <p>Indicate times of day during which elevator is not available</p>
+                    <p>N/A</p>
+                  </div>
                 </div>
-                <div class="info no">
-                  <p>Aisles large enough for wheelchair/scooter</p>
-                  <p>No</p>
+
+                <button class="collapsible">Accessibility: Washrooms</button>
+                <div class="majorSection">
+                  <div class="info">
+                    <p>Location of washroom</p>
+                    <p>Each floor (Accessible)</p>
+                  </div>
+                  <div class="info na">
+                    <p>Single door entrance</p>
+                    <p>N/A</p>
+                  </div>
+                  <div class="info na">
+                    <p>Door is wide & easy to open</p>
+                    <p>N/A</p>
+                  </div>
+                  <div class="info">
+                    <p>Indicate if/where there is accessible washroom</p>
+                    <p>Single user washrooms on 1st, 4th,5th,,7th 8th floors</p>
+                  </div>
                 </div>
-                <div class="info no">
-                  <p>Reserved seating/space for wheelchair</p>
-                  <p>No</p>
-                </div>
-                <div class="info no">
-                  <p>Clear space for wheelchair to navigate</p>
-                  <p>No</p>
-                </div>
-                <div class="info yes">
-                  <p>Lights can be dimmed</p>
-                  <p>Yes</p>
+
+                <button class="collapsible">Accessibility: Room</button>
+                <div class="majorSection">
+                  <div class="info no">
+                    <p>At least 1 automatic entrance</p>
+                    <p>No</p>
+                  </div>
+                  <div class="info no">
+                    <p>Alternate accessible entrance</p>
+                    <p>No</p>
+                  </div>
+                  <div class="info yes">
+                    <p>Accessible seating located near accessible entrance</p>
+                    <p>Yes</p>
+                  </div>
+                  <div class="info no">
+                    <p>Aisles large enough for wheelchair/scooter</p>
+                    <p>No</p>
+                  </div>
+                  <div class="info no">
+                    <p>Reserved seating/space for wheelchair</p>
+                    <p>No</p>
+                  </div>
+                  <div class="info no">
+                    <p>Clear space for wheelchair to navigate</p>
+                    <p>No</p>
+                  </div>
+                  <div class="info yes">
+                    <p>Lights can be dimmed</p>
+                    <p>Yes</p>
+                  </div>
                 </div>
               </div>
-              <a style="margin: auto; margin-top: 20px;" href="documents/Wedding_Form.pdf" class="button">Floor plan PDF</a>
-            </section>
+              <a style="margin: auto; margin-top: 20px; max-width: 150px" href="documents/Wedding_Form.pdf" class="button">Floor plan PDF</a>
+            </div>
           </div>
         </div>
+        <div class="calendar">
+          <div class="tools" style="padding-left: 10px; padding-right: 0; margin-bottom: 0; border-bottom: none">
+            <div>
+              <p style="display: inline; color: #002A5C">Date:</p>
+              <input type="date">
+            </div>
+            <a href="" class="button calendar-button"><i class="material-icons" style="padding-right: 5px; color: #002A5C">date_range</i>Printable Calendar</a>
+
+            <div class="button-group" style="width: auto; margin: 0">
+              <button class="button calendar-button"><i class="material-icons">keyboard_arrow_left</i>Previous</button>
+              <button class="button calendar-button"><i class="material-icons" style="padding-right: 5px;">today</i>Today</button>
+              <button class="button calendar-button">Next <i class="material-icons">keyboard_arrow_right</i></button>
+            </div>
+          </div>
+          <table cellspacing="0" cellpadding="0" border="0" summary="" class="t3WeekCalendarAlternative1Holder">
+            <tbody>
+              <tr>
+                <td class="t3MonthTitle" id="test">August 2018 - September 2018</td>
+              </tr>
+              <tr>
+                <td>
+                  <table border="0" cellpadding="0" cellspacing="0" summary="0" class="t3WeekCalendarAlternative1">
+                    <tbody>
+                      <tr>
+                        <th class="t3Hour">
+                          <br></th>
+                        <th class="t3DayOfWeek">Monday <br>08/27</th>
+                        <th class="t3DayOfWeek">Tuesday <br>08/28</th>
+                        <th class="t3DayOfWeek">Wednesday<br>08/29</th>
+                        <th class="t3DayOfWeek">Thursday <br>08/30</th>
+                        <th class="t3DayOfWeek">Friday <br>08/31</th>
+                        <th class="t3DayOfWeek">Saturday <br>09/01</th>
+                        <th class="t3DayOfWeek">Sunday <br>09/02</th>
+                      </tr>
+                      <input type="hidden" id="p_date_column_name" value="BDATE">
+                      <tr>
+                        <th class="t3Hour">
+                          &nbsp;
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                      </tr>
+                      <tr>
+                        <th class="t3Hour">
+                          07:00
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          CTSI TRI-CAMPUS TA DAY 2018
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                      </tr>
+                      <tr>
+                        <th class="t3Hour">
+                          08:00
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          CTSI TRI-CAMPUS TA DAY 2018
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                      </tr>
+                      <tr>
+                        <th class="t3Hour">
+                          09:00
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          INTL EXPERIENCE STEP UP
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          CTSI TRI-CAMPUS TA DAY 2018
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                      </tr>
+                      <tr>
+                        <th class="t3Hour">
+                          10:00
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          INTL EXPERIENCE STEP UP INTL EXPERIENCE STEP UP
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          CTSI TRI-CAMPUS TA DAY 2018
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                      </tr>
+                      <tr>
+                        <th class="t3Hour">
+                          11:00
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          INTL EXPERIENCE STEP UP
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          CTSI TRI-CAMPUS TA DAY 2018
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          ENGINEERING ORIENTATION
+                          <br></td>
+                      </tr>
+                      <tr>
+                        <th class="t3Hour">
+                          12:00
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          CTSI TRI-CAMPUS TA DAY 2018
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          ENGINEERING ORIENTATION
+                          <br></td>
+                      </tr>
+                      <tr>
+                        <th class="t3Hour">
+                          13:00
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          CTSI TRI-CAMPUS TA DAY 2018
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          ENGINEERING ORIENTATION
+                          <br></td>
+                      </tr>
+                      <tr>
+                        <th class="t3Hour">
+                          14:00
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          CTSI TRI-CAMPUS TA DAY 2018
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          ENGINEERING ORIENTATION
+                          <br></td>
+                      </tr>
+                      <tr>
+                        <th class="t3Hour">
+                          15:00
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          CTSI TRI-CAMPUS TA DAY 2018
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          ENGINEERING ORIENTATION
+                          <br></td>
+                      </tr>
+                      <tr>
+                        <th class="t3Hour">
+                          16:00
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          CTSI TRI-CAMPUS TA DAY 2018
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          ENGINEERING ORIENTATION
+                          <br></td>
+                      </tr>
+                      <tr>
+                        <th class="t3Hour">
+                          17:00
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          ENG WELCOME NIGHT
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          CTSI TRI-CAMPUS TA DAY 2018
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          ENGINEERING ORIENTATION
+                          <br></td>
+                      </tr>
+                      <tr>
+                        <th class="t3Hour">
+                          18:00
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          ENG WELCOME NIGHT
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          ENG WELCOME NIGHT
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN ENG WELCOME NIGHT
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          STUDENT LIFE ORIENTATION TRAIN
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                      </tr>
+                      <tr>
+                        <th class="t3Hour">
+                          19:00
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          ENG WELCOME NIGHT
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          ENG WELCOME NIGHT
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          ENG WELCOME NIGHT
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                      </tr>
+                      <tr>
+                        <th class="t3Hour">
+                          20:00
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          ENG WELCOME NIGHT
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          ENG WELCOME NIGHT
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          ENG WELCOME NIGHT
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                      </tr>
+                      <tr>
+                        <th class="t3Hour">
+                          21:00
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                      </tr>
+                      <tr>
+                        <th class="t3Hour">
+                          22:00
+                          <br></th>
+                        <td class="t3Today" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td class="t3Day" valign="top">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                        <td valign="top" class="t3NonDay">
+                          <br></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- <div class="building-container" style="width: 400px">
+          <img id="building-image" src="images/bahen_image1.jpg" alt="Building image">
+          <p class="building-title">Bahen Centre Information Tech</p>
+          <p>40 St. George Street<br>Toronto, Ontario</p>
+        </div> -->
       </div>
     </div>
 
@@ -410,25 +769,29 @@
   </div>
 
   <script>
-    var buttonGroups = document.getElementsByClassName('button-group');
-    var current = [];
-    for (var i = 0; i < buttonGroups.length; i++) {
-      current.push(null);
-    }
+    var toggler = document.getElementById('toggle-switch');
+    var roomDescription = document.getElementsByClassName('room-container')[0];
+    var roomLabel = document.getElementById('room-label');
 
-    for (var i = 0; i < buttonGroups.length; i++) {
-      // make the default tab active
-      document.getElementsByClassName('default')[0].click();
-      document.getElementsByClassName('default')[1].click();
+    var calendar = document.getElementsByClassName('calendar')[0];
+    var calendarLabel = document.getElementById('calendar-label');
 
-      function changeTab(tab, tabGroup) {
-        if (current[tabGroup]) {
-          document.getElementById(current[tabGroup]).style.display = 'none';
-        }
-        document.getElementById(tab).style.display = 'block';
-        current[tabGroup] = tab;
+    changePage();
+
+    function changePage() {
+      if (toggler.checked) {
+        roomDescription.style.display = 'none';
+        calendar.style.display = 'block';
+        calendarLabel.classList.add('label-active');
+        roomLabel.classList.remove('label-active');
+      } else {
+        roomDescription.style.display = 'block';
+        calendar.style.display = 'none';
+        roomLabel.classList.add('label-active');
+        calendarLabel.classList.remove('label-active');
       }
     }
+
   </script>
 </body>
 
