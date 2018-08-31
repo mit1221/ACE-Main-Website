@@ -22,7 +22,7 @@ function resized(){
   var diff = newNumberOfCircles - circlesContainer.children.length;
   if (diff >= 0) {
     for (var i = 0; i < diff; i++) {
-      createCircle(circlesContainer.children.length + i);
+      createCircle(circlesContainer.children.length);
     }
   } else {
     for (var i = 0; i < -(diff); i++) {
@@ -81,19 +81,23 @@ $(document).ready(function() {
 
 function goLeft() {
   n--;
+  var direction = 'left';
   if (n <= -1) {
     n = Math.ceil(items.length / itemsToShow) - 1;
+    direction = 'right';
   }
-  showItems(n, 'left');
+  showItems(n, direction);
 }
 
 
 function goRight() {
   n++;
+  var direction = 'right';
   if (n >= Math.ceil(items.length / itemsToShow)) {
     n = 0;
+    direction = 'left';
   }
-  showItems(n, 'right');
+  showItems(n, direction);
 }
 
 

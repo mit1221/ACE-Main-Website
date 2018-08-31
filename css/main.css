@@ -308,8 +308,9 @@ body {
 /* --------------------------- BACKGROUND IMAGE ------------------ */
 .background-container, .background {
   width: 100%;
+  margin: auto;
   height: 50vh;
-  min-height: 200px;
+  min-height: 100px;
   max-height: 500px;
 }
 
@@ -324,9 +325,6 @@ body {
 
 .background-container.homepage {
   background: rgba(0, 42, 92, 0.4);
-  -webkit-animation: shrink 0.5s ease-out forwards; /* Safari 4.0 - 8.0 */
-  animation: shrink 0.5s ease-out forwards;
-  animation-delay: 1s;
   position: relative;
 }
 
@@ -368,9 +366,7 @@ body {
 
 .background.index {
   background-image: url('../images/index_background.jpg');
-  -webkit-animation: shrink 0.5s ease-out forwards; /* Safari 4.0 - 8.0 */
-  animation: shrink 0.5s ease-out forwards;
-  animation-delay: 1s;
+  /* background-position: 0 100%; */
 }
 
 .background.wedding {
