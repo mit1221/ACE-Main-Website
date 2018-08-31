@@ -557,6 +557,10 @@ body {
   transition: 0.2s;
 }
 
+.homepage #contact_info_card mark {
+  background-color: white;
+}
+
 #contact_info_card a:hover mark {
   background-color: #a7a3a3;
 }
@@ -984,6 +988,12 @@ h4 {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   grid-row: 1/3;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ============================= ABOUT US PAGE ======================= */
@@ -1617,7 +1627,7 @@ button.open + .majorSection:last-child {
   bottom: 0;
 }
 
-iframe {
+#street_view_container iframe {
   display: none;
   width: 100%;
   height: 100%;
